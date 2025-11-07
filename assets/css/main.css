@@ -478,3 +478,125 @@ p {
   font-size: 1.1rem;
   line-height: 1.7;
 }
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-info {
+  margin-bottom: 2rem;
+}
+
+.footer-info h3 {
+  color: var(--light-color);
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.footer-copy p {
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .timeline::before {
+    left: 25px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+  }
+  
+  .nav ul {
+    margin-top: 1rem;
+  }
+  
+  .nav li {
+    margin: 0 0.5rem;
+  }
+  
+  .hero {
+    padding: 7rem 0 2rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .timeline-content {
+    margin-left: 1rem;
+  }
+  
+  .journey-summary {
+    padding: 1.5rem;
+  }
+}
