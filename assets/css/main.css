@@ -817,6 +817,98 @@ p {
   font-size: 0.95rem;
 }
 
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .timeline::before {
+    left: 25px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav li {
+    margin: 0.5rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+  }
+  
+  .nav ul {
+    margin-top: 1rem;
+  }
+  
+  .nav li {
+    margin: 0 0.5rem;
+  }
+  
+  .hero {
+    padding: 7rem 0 2rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    flex: 0 0 40px;
+    height: 40px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-tags {
+    justify-content: flex-start;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .hero-text h2 {
     font-size: 2rem;
@@ -838,5 +930,21 @@ p {
   
   .journey-summary {
     padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-category {
+    padding: 1.5rem;
+  }
+
+  .tech-card {
+    padding: 2rem 1.5rem;
   }
 }

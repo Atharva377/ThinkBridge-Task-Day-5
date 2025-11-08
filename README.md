@@ -1,6 +1,6 @@
 # Atharva Senapati - Web Development Journey
 
-A personal profile page showcasing my 4-day intensive web development learning journey and the 5th day implementation.
+A personal profile page showcasing my 5-day intensive web development learning journey and the 5th day implementation.
 
 ## 📚 Learning Timeline
 
@@ -32,10 +32,10 @@ A personal profile page showcasing my 4-day intensive web development learning j
 - Applied all learned concepts
 - Created responsive design
 - Implemented modern CSS features
-- Deployed complete portfolio
+- Deployed complete profile page
 
 ## 🛠 Technologies Used
 - HTML5
-- CSS3 (Variables, Flexbox, Grid)
+- CSS3
 - Responsive Design
 - Git & GitHub
