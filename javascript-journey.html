@@ -4,271 +4,591 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Journey - Atharva Senapati</title>
+    <title data-en="JavaScript Journey - Atharva Senapati" data-mr="जावास्क्रिप्ट प्रवास - अथर्व सेनापती"
+        data-hi="जावास्क्रिप्ट यात्रा - अथर्व सेनापति">
+        JavaScript Journey - Atharva Senapati
+    </title>
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
+
+    <style>
+        .language-selector select {
+            padding: 6px 10px;
+            font-size: 15px;
+            border-radius: 6px;
+        }
+
+        @media(max-width:900px) {
+            header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <h1>Atharva Senapati</h1>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="journey.html">Learning Journey</a></li>
-        <li><a href="javascript-journey.html">JavaScript Journey</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+
+    <header class="header">
+        <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+
+            <div class="logo">
+                <h1 data-en="Atharva Senapati" data-mr="अथर्व सेनापती" data-hi="अथर्व सेनापति">
+                    Atharva Senapati
+                </h1>
+            </div>
+
+            <nav class="nav">
+                <ul style="display:flex; gap:20px;">
+                    <li><a href="index.html" data-en="Home" data-mr="मुख्यपृष्ठ" data-hi="मुखपृष्ठ">Home</a></li>
+
+                    <li><a href="about.html" data-en="About" data-mr="माझ्याबद्दल" data-hi="मेरे बारे में">About</a>
+                    </li>
+
+                    <li><a href="skills.html" data-en="Skills" data-mr="कौशल्ये" data-hi="कौशल">Skills</a></li>
+
+                    <li><a href="journey.html" data-en="Learning Journey" data-mr="शिकण्याचा प्रवास"
+                            data-hi="सीखने की यात्रा">
+                            Learning Journey</a></li>
+
+                    <li><a href="javascript-journey.html" data-en="JavaScript Journey" data-mr="जावास्क्रिप्ट प्रवास"
+                            data-hi="जावास्क्रिप्ट यात्रा">
+                            JavaScript Journey</a></li>
+                </ul>
+            </nav>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="language-selector">
+                <select id="languageSwitcher">
+                    <option value="en" selected>English</option>
+                    <option value="mr">मराठी</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+            </div>
+
+        </div>
+    </header>
 
     <main>
-        <!-- JavaScript Journey Section -->
+
         <section class="journey">
             <div class="container">
-                <h2 class="section-title">JavaScript Learning Journey (Day 6-12)</h2>
 
-                <!-- Interactive JavaScript Demo -->
-                <!-- Interactive JavaScript Demo -->
+                <h2 class="section-title" data-en="JavaScript Learning Journey (Day 6-12)"
+                    data-mr="जावास्क्रिप्ट शिकण्याचा प्रवास (दिवस ६-१२)"
+                    data-hi="जावास्क्रिप्ट सीखने की यात्रा (दिन 6-12)">
+                    JavaScript Learning Journey (Day 6-12)
+                </h2>
+
                 <div class="javascript-demo">
-                    <h3>Interactive JavaScript Demonstrations</h3>
+
+                    <h3 data-en="Interactive JavaScript Demonstrations" data-mr="इंटरअॅक्टिव्ह जावास्क्रिप्ट डेमो"
+                        data-hi="इंटरएक्टिव जावास्क्रिप्ट डेमो">
+                        Interactive JavaScript Demonstrations
+                    </h3>
 
                     <!-- Logical Operators Demo -->
                     <div class="demo-section">
-                        <h4>Logical Operators & Functions</h4>
+                        <h4 data-en="Logical Operators & Functions" data-mr="लॉजिकल ऑपरेटर आणि फंक्शन्स"
+                            data-hi="लॉजिकल ऑपरेटर और फंक्शन्स">
+                            Logical Operators & Functions
+                        </h4>
+
                         <div class="demo-controls">
-                            <input type="number" id="numberInput" placeholder="Enter a number" class="demo-input">
-                            <button onclick="checkNumber()" class="btn btn-primary">Check Number</button>
-                            <button onclick="demonstrateClosure()" class="btn btn-secondary">Closure Demo</button>
+                            <input type="number" id="numberInput" data-en="Enter a number" data-mr="संख्या लिहा"
+                                data-hi="एक संख्या दर्ज करें" placeholder="Enter a number" class="demo-input">
+
+                            <button onclick="checkNumber()" class="btn btn-primary" data-en="Check Number"
+                                data-mr="संख्या तपासा" data-hi="संख्या जांचें">
+                                Check Number
+                            </button>
+
+                            <button onclick="demonstrateClosure()" class="btn btn-secondary" data-en="Closure Demo"
+                                data-mr="क्लोजर डेमो" data-hi="क्लोज़र डेमो">
+                                Closure Demo
+                            </button>
                         </div>
+
                         <div id="logicalOutput" class="demo-output"></div>
                     </div>
 
                     <!-- Objects and Methods Demo -->
                     <div class="demo-section">
-                        <h4>Objects, Getters & Setters</h4>
+                        <h4 data-en="Objects, Getters & Setters" data-mr="ऑब्जेक्ट्स, गेटर आणि सेटर"
+                            data-hi="ऑब्जेक्ट्स, गेटर्स और सेटर्स">
+                            Objects, Getters & Setters
+                        </h4>
+
                         <div class="demo-controls">
-                            <button onclick="createStudentObject()" class="btn btn-primary">Create Student
-                                Object</button>
-                            <button onclick="useGetterSetter()" class="btn btn-secondary">Getter/Setter Demo</button>
+                            <button onclick="createStudentObject()" class="btn btn-primary"
+                                data-en="Create Student Object" data-mr="विद्यार्थी ऑब्जेक्ट तयार करा"
+                                data-hi="स्टूडेंट ऑब्जेक्ट बनाएं">
+                                Create Student Object
+                            </button>
+
+                            <button onclick="useGetterSetter()" class="btn btn-secondary" data-en="Getter/Setter Demo"
+                                data-mr="गेटर/सेटर डेमो" data-hi="गेटर/सेटर डेमो">
+                                Getter/Setter Demo
+                            </button>
                         </div>
+
                         <div id="objectOutput" class="demo-output"></div>
                     </div>
 
-                    <!-- Proxy and Currying Demo -->
+                    <!-- Proxy & Currying Demo -->
                     <div class="demo-section">
-                        <h4>Proxy & Currying</h4>
+                        <h4 data-en="Proxy & Currying" data-mr="प्रॉक्सी आणि करींग" data-hi="प्रॉक्सी और करीइंग">
+                            Proxy & Currying
+                        </h4>
+
                         <div class="demo-controls">
-                            <button onclick="demonstrateProxy()" class="btn btn-primary">Proxy Demo</button>
-                            <button onclick="demonstrateCurrying()" class="btn btn-secondary">Currying Demo</button>
+                            <button onclick="demonstrateProxy()" class="btn btn-primary" data-en="Proxy Demo"
+                                data-mr="प्रॉक्सी डेमो" data-hi="प्रॉक्सी डेमो">
+                                Proxy Demo
+                            </button>
+
+                            <button onclick="demonstrateCurrying()" class="btn btn-secondary" data-en="Currying Demo"
+                                data-mr="करींग डेमो" data-hi="करीइंग डेमो">
+                                Currying Demo
+                            </button>
                         </div>
+
                         <div id="advancedOutput" class="demo-output"></div>
                     </div>
 
                     <!-- Interactive Counter -->
                     <div class="demo-section">
-                        <h4>Interactive Counter with Closure</h4>
+                        <h4 data-en="Interactive Counter with Closure" data-mr="क्लोजरसह इंटरअॅक्टिव्ह काउंटर"
+                            data-hi="क्लोज़र के साथ इंटरैक्टिव काउंटर">
+                            Interactive Counter with Closure
+                        </h4>
+
                         <div class="counter-controls">
-                            <button onclick="decrementCounter()" class="btn btn-secondary">-</button>
+                            <button onclick="decrementCounter()" class="btn btn-secondary" data-en="-" data-mr="-"
+                                data-hi="-">-</button>
+
                             <span id="counterValue" class="counter-display">0</span>
-                            <button onclick="incrementCounter()" class="btn btn-primary">+</button>
-                            <button onclick="resetCounter()" class="btn btn-secondary">Reset</button>
+
+                            <button onclick="incrementCounter()" class="btn btn-primary" data-en="+" data-mr="+"
+                                data-hi="+">+</button>
+
+                            <button onclick="resetCounter()" class="btn btn-secondary" data-en="Reset" data-mr="रीसेट"
+                                data-hi="रीसेट">
+                                Reset
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- JavaScript Timeline -->
+                <!-- TIMELINE SECTION -->
                 <div class="timeline">
+
+                    <!-- DAY 6 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">6</div>
                         <div class="timeline-content">
-                            <h3>Day 6: JavaScript Fundamentals</h3>
-                            <div class="timeline-date">Variables & Operators</div>
-                            <p>Started with JavaScript basics - understanding variables, data types, and logical
-                                operators for decision making in code.</p>
+
+                            <h3 data-en="Day 6: JavaScript Fundamentals" data-mr="दिवस ६: जावास्क्रिप्ट मूलतत्त्वे"
+                                data-hi="दिन 6: जावास्क्रिप्ट मूल बातें">
+                                Day 6: JavaScript Fundamentals
+                            </h3>
+
+                            <div class="timeline-date" data-en="Variables & Operators" data-mr="चल आणि ऑपरेटर"
+                                data-hi="वेरिएबल्स और ऑपरेटर्स">
+                                Variables & Operators
+                            </div>
+
+                            <p data-en="Started with JavaScript basics - understanding variables, data types, and logical operators."
+                                data-mr="जावास्क्रिप्टची मूलभूत माहिती – चल, डेटा प्रकार आणि लॉजिकल ऑपरेटर समजले."
+                                data-hi="जावास्क्रिप्ट की शुरुआत – वेरिएबल, डेटा प्रकार और लॉजिकल ऑपरेटर्स सीखे।">
+                                Started with JavaScript basics...
+                            </p>
+
                             <ul>
-                                <li>let, const, and var declarations</li>
-                                <li>Primitive data types</li>
-                                <li>Logical operators (&&, ||, !)</li>
-                                <li>Comparison operators</li>
-                                <li>Type coercion and conversion</li>
+                                <li data-en="let, const, and var declarations" data-mr="let, const आणि var घोषण्या"
+                                    data-hi="let, const और var डिक्लेरेशन">let, const...</li>
+
+                                <li data-en="Primitive data types" data-mr="मूळ डेटा प्रकार"
+                                    data-hi="प्रिमिटिव डेटा टाइप्स">Primitive data types</li>
+
+                                <li data-en="Logical operators (&&, ||, !)" data-mr="लॉजिकल ऑपरेटर (&&, ||, !)"
+                                    data-hi="लॉजिकल ऑपरेटर (&&, ||, !)">Logical operators</li>
+
+                                <li data-en="Comparison operators" data-mr="तुलना ऑपरेटर" data-hi="तुलना ऑपरेटर">
+                                    Comparison operators</li>
+
+                                <li data-en="Type coercion and conversion" data-mr="टाइप coercion आणि conversion"
+                                    data-hi="टाइप coercion और conversion">Type coercion</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- DAY 7 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">7</div>
                         <div class="timeline-content">
-                            <h3>Day 7: Functions & Scope</h3>
-                            <div class="timeline-date">Function Mastery</div>
-                            <p>Dived deep into functions - different ways to declare them, parameters, return values,
-                                and understanding scope.</p>
+
+                            <h3 data-en="Day 7: Functions & Scope" data-mr="दिवस ७: फंक्शन्स आणि स्कोप"
+                                data-hi="दिन 7: फंक्शन्स और स्कोप">
+                                Day 7: Functions & Scope
+                            </h3>
+
+                            <div class="timeline-date" data-en="Function Mastery" data-mr="फंक्शन मास्टरी"
+                                data-hi="फंक्शन मास्टरी">
+                                Function Mastery
+                            </div>
+
+                            <p data-en="Dived deep into functions - declarations, expressions, arrow functions, parameters, return values."
+                                data-mr="फंक्शन्समध्ये सखोल अभ्यास – डिक्लेरेशन, एक्सप्रेशन, अॅरो फंक्शन्स."
+                                data-hi="फंक्शन्स का गहरा अध्ययन – डिक्लेरेशन, एक्सप्रेशन, ऐरो फंक्शन्स।">
+                                Dived deep into functions...
+                            </p>
+
                             <ul>
-                                <li>Function declarations vs expressions</li>
-                                <li>Arrow functions</li>
-                                <li>Parameters and arguments</li>
-                                <li>Return statements</li>
-                                <li>Global vs local scope</li>
+                                <li data-en="Function declarations vs expressions"
+                                    data-mr="फंक्शन डिक्लेरेशन vs एक्सप्रेशन" data-hi="फंक्शन डिक्लेरेशन vs एक्सप्रेशन">
+                                    Function declarations...</li>
+
+                                <li data-en="Arrow functions" data-mr="अॅरो फंक्शन्स" data-hi="ऐरो फंक्शन्स">Arrow
+                                    functions</li>
+
+                                <li data-en="Parameters and arguments" data-mr="पॅरामिटर्स आणि argument"
+                                    data-hi="पैरामीटर्स और आर्गुमेंट्स">Parameters</li>
+
+                                <li data-en="Global vs local scope" data-mr="ग्लोबल vs लोकल स्कोप"
+                                    data-hi="ग्लोबल vs लोकल स्कोप">Scope</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- DAY 8 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">8</div>
                         <div class="timeline-content">
-                            <h3>Day 8: Objects & Built-in Methods</h3>
-                            <div class="timeline-date">Object-Oriented Basics</div>
-                            <p>Learned about objects, properties, methods, and JavaScript's built-in functions for
-                                various data types.</p>
+
+                            <h3 data-en="Day 8: Objects & Built-in Methods"
+                                data-mr="दिवस ८: ऑब्जेक्ट्स आणि बिल्ट-इन मेथड्स"
+                                data-hi="दिन 8: ऑब्जेक्ट्स और बिल्ट-इन मेथड्स">
+                                Day 8: Objects & Built-in Methods
+                            </h3>
+
+                            <div class="timeline-date" data-en="Object-Oriented Basics"
+                                data-mr="ऑब्जेक्ट-ओरिएंटेड बेसिक्स" data-hi="ऑब्जेक्ट ओरिएंटेड बेसिक्स">
+                                Object-Oriented Basics
+                            </div>
+
+                            <p data-en="Learned about objects, properties, methods, and JavaScript’s built-in functions."
+                                data-mr="ऑब्जेक्ट्स, प्रॉपर्टीज, मेथड्स आणि जावास्क्रिप्टमधील बिल्ट-इन फंक्शन्स शिकले."
+                                data-hi="ऑब्जेक्ट्स, प्रॉपर्टीज, मेथड्स और जावास्क्रिप्ट के बिल्ट-इन फंक्शन्स सीखे।">
+                                Learned about objects...
+                            </p>
+
                             <ul>
-                                <li>Object literal syntax</li>
-                                <li>Property access and modification</li>
-                                <li>Object methods</li>
-                                <li>Built-in array methods</li>
-                                <li>String methods</li>
+                                <li data-en="Object literal syntax" data-mr="ऑब्जेक्ट लिटरल सिन्टॅक्स"
+                                    data-hi="ऑब्जेक्ट लिटरल सिंटैक्स">Object literal syntax</li>
+
+                                <li data-en="Property access and modification" data-mr="प्रॉपर्टी ऍक्सेस आणि बदल"
+                                    data-hi="प्रॉपर्टी एक्सेस और बदलाव">Property access</li>
+
+                                <li data-en="Object methods" data-mr="ऑब्जेक्ट मेथड्स" data-hi="ऑब्जेक्ट मेथड्स">Object
+                                    methods</li>
+
+                                <li data-en="Built-in array methods" data-mr="बिल्ट-इन अॅरे मेथड्स"
+                                    data-hi="बिल्ट-इन ऐरे मेथड्स">Array methods</li>
+
+                                <li data-en="String methods" data-mr="स्ट्रिंग मेथड्स" data-hi="स्ट्रिंग मेथड्स">String
+                                    methods</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- DAY 9 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">9</div>
                         <div class="timeline-content">
-                            <h3>Day 9: Advanced Functions</h3>
-                            <div class="timeline-date">Closures & Higher-Order Functions</div>
-                            <p>Explored advanced function concepts including closures, higher-order functions, and
-                                callback patterns.</p>
+
+                            <h3 data-en="Day 9: Advanced Functions" data-mr="दिवस ९: प्रगत फंक्शन्स"
+                                data-hi="दिन 9: उन्नत फंक्शन्स">
+                                Day 9: Advanced Functions
+                            </h3>
+
+                            <div class="timeline-date" data-en="Closures & Higher-Order Functions"
+                                data-mr="क्लोजर्स आणि उच्च-स्तरीय फंक्शन्स" data-hi="क्लोज़र और हाइअर-ऑर्डर फंक्शन्स">
+                                Closures & Higher-Order Functions
+                            </div>
+
+                            <p data-en="Explored closures, higher-order functions, callbacks, and IIFEs."
+                                data-mr="क्लोजर्स, उच्च-स्तरीय फंक्शन्स, कॉलबॅक्स आणि IIFE यांचा अभ्यास केला."
+                                data-hi="क्लोज़र्स, हाइअर-ऑर्डर फंक्शन्स, कॉलबैक्स और IIFE सीखे।">
+                                Explored closures...
+                            </p>
+
                             <ul>
-                                <li>Closure concept and practical uses</li>
-                                <li>Higher-order functions</li>
-                                <li>Callback functions</li>
-                                <li>Immediately Invoked Function Expressions (IIFE)</li>
+                                <li data-en="Closure concept and uses" data-mr="क्लोजर संकल्पना आणि उपयोग"
+                                    data-hi="क्लोज़र कांसेप्ट और उपयोग">Closures</li>
+
+                                <li data-en="Higher-order functions" data-mr="उच्च-स्तरीय फंक्शन्स"
+                                    data-hi="हाइअर-ऑर्डर फंक्शन्स">HOFs</li>
+
+                                <li data-en="Callback functions" data-mr="कॉलबॅक फंक्शन्स" data-hi="कॉलबैक फंक्शन्स">
+                                    Callbacks</li>
+
+                                <li data-en="Immediately Invoked Functions (IIFE)"
+                                    data-mr="तत्काळ कॉल केलेली फंक्शन्स (IIFE)"
+                                    data-hi="तुरंत कॉल होने वाले फंक्शन्स (IIFE)">
+                                    IIFE</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- DAY 10 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">10</div>
                         <div class="timeline-content">
-                            <h3>Day 10: Classes & Prototypes</h3>
-                            <div class="timeline-date">Object-Oriented Programming</div>
-                            <p>Understood JavaScript's prototype-based inheritance and modern class syntax with getters
-                                and setters.</p>
+
+                            <h3 data-en="Day 10: Classes & Prototypes" data-mr="दिवस १०: क्लासेस आणि प्रोटोटाइप्स"
+                                data-hi="दिन 10: क्लासेज और प्रोटो타इप्स">
+                                Day 10: Classes & Prototypes
+                            </h3>
+
+                            <div class="timeline-date" data-en="Object-Oriented Programming"
+                                data-mr="ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग" data-hi="ऑब्जेक्ट ओरिएंटेड प्रोग्रामिंग">
+                                Object-Oriented Programming
+                            </div>
+
+                            <p data-en="Learned classes, inheritance, static methods, and prototype chain."
+                                data-mr="क्लासेस, इनहेरिटन्स, स्टॅटिक मेथड्स आणि प्रोटोटाइप चेन शिकले."
+                                data-hi="क्लासेज, इनहेरिटेंस, स्टैटिक मेथड्स और प्रोटो चेन सीखे।">
+                                Learned classes...
+                            </p>
+
                             <ul>
-                                <li>Class syntax and constructor methods</li>
-                                <li>Getter and setter methods</li>
-                                <li>Static methods</li>
-                                <li>Inheritance with extends</li>
-                                <li>Prototype chain</li>
+                                <li data-en="Class syntax & constructor" data-mr="क्लास सिन्टॅक्स आणि कन्स्ट्रक्टर"
+                                    data-hi="क्लास सिंटैक्स और कंस्ट्रक्टर">Class syntax</li>
+
+                                <li data-en="Getter and setter methods" data-mr="गेटर आणि सेटर मेथड्स"
+                                    data-hi="गेटर और सेटर मेथड्स">Getters/Setters</li>
+
+                                <li data-en="Static methods" data-mr="स्टॅटिक मेथड्स" data-hi="स्टैटिक मेथड्स">Static
+                                    Methods</li>
+
+                                <li data-en="Inheritance with extends" data-mr="extends सह इनहेरिटन्स"
+                                    data-hi="extends के साथ इनहेरिटेंस">Inheritance</li>
+
+                                <li data-en="Prototype chain" data-mr="प्रोटोटाइप चेन" data-hi="प्रोटो टाइप चेन">
+                                    Prototype chain</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- Day 11 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">11</div>
                         <div class="timeline-content">
-                            <h3>Day 11: Advanced Concepts</h3>
-                            <div class="timeline-date">Proxy & Metaprogramming</div>
-                            <p>Learned about advanced JavaScript features including Proxy for metaprogramming and
-                                function currying.</p>
+
+                            <h3 data-en="Day 11: Advanced Concepts" data-mr="दिवस ११: प्रगत संकल्पना"
+                                data-hi="दिन 11: उन्नत अवधारणाएं">
+                                Day 11: Advanced Concepts
+                            </h3>
+
+                            <div class="timeline-date" data-en="Proxy & Metaprogramming"
+                                data-mr="प्रॉक्सी आणि मेटाप्रोग्रामिंग" data-hi="प्रॉक्सी और मेटाप्रोग्रामिंग">
+                                Proxy & Metaprogramming
+                            </div>
+
+                            <p data-en="Learned Proxy object, traps, currying, and partial application."
+                                data-mr="प्रॉक्सी ऑब्जेक्ट, ट्रॅप्स, करींग आणि पार्टिअल ऍप्लिकेशन शिकले."
+                                data-hi="प्रॉक्सी ऑब्जेक्ट, ट्रैप्स, करीइंग और पार्टिअल एप्लीकेशन सीखे।">
+                                Learned Proxy...
+                            </p>
+
                             <ul>
-                                <li>Proxy object and handlers</li>
-                                <li>Trap methods (get, set, apply)</li>
-                                <li>Function currying techniques</li>
-                                <li>Partial application</li>
+                                <li data-en="Proxy object & handlers" data-mr="प्रॉक्सी ऑब्जेक्ट आणि हँडलर्स"
+                                    data-hi="प्रॉक्सी ऑब्जेक्ट और हैंडलर्स">Proxy</li>
+
+                                <li data-en="Trap methods (get, set, apply)" data-mr="ट्रॅप मेथड्स (get, set, apply)"
+                                    data-hi="ट्रैप मेथड्स (get, set, apply)">Trap methods</li>
+
+                                <li data-en="Function currying" data-mr="फंक्शन करींग" data-hi="फंक्शन करीइंग">Currying
+                                </li>
+
+                                <li data-en="Partial application" data-mr="पार्टिअल ऍप्लिकेशन"
+                                    data-hi="पार्टिअल एप्लीकेशन">Partial application</li>
                             </ul>
                         </div>
                     </div>
 
+                    <!-- DAY 12 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">12</div>
                         <div class="timeline-content">
-                            <h3>Day 12: Practical Implementation</h3>
-                            <div class="timeline-date">Building Interactive Features</div>
-                            <p>Applied all JavaScript concepts to build interactive features and enhance the portfolio
-                                with dynamic functionality.</p>
+
+                            <h3 data-en="Day 12: Practical Implementation" data-mr="दिवस १२: प्रत्यक्ष अंमलबजावणी"
+                                data-hi="दिन 12: व्यावहारिक कार्यान्वयन">
+                                Day 12: Practical Implementation
+                            </h3>
+
+                            <div class="timeline-date" data-en="Building Interactive Features"
+                                data-mr="इंटरअॅक्टिव्ह वैशिष्ट्ये तयार करणे" data-hi="इंटरएक्टिव फीचर्स बनाना">
+                                Building Interactive Features
+                            </div>
+
+                            <p data-en="Applied JavaScript concepts to build interactive features and UI components."
+                                data-mr="जावास्क्रिप्टचा वापर करून इंटरअॅक्टिव्ह फीचर्स आणि UI घटक तयार केले."
+                                data-hi="जावास्क्रिप्ट का उपयोग कर इंटरएक्टिव फीचर्स और UI कॉम्पोनेंट्स बनाए।">
+                                Applied JavaScript concepts...
+                            </p>
+
                             <ul>
-                                <li>DOM manipulation</li>
-                                <li>Event handling</li>
-                                <li>Dynamic content updates</li>
-                                <li>Form validation</li>
-                                <li>Interactive UI components</li>
+                                <li data-en="DOM manipulation" data-mr="DOM हाताळणी" data-hi="DOM मैनिपुलेशन">DOM
+                                    manipulation</li>
+
+                                <li data-en="Event handling" data-mr="इव्हेंट हँडलिंग" data-hi="इवेंट हैंडलिंग">Event
+                                    handling</li>
+
+                                <li data-en="Dynamic content updates" data-mr="डायनॅमिक कंटेंट अपडेट्स"
+                                    data-hi="डायनामिक कंटेंट अपडेट्स">Dynamic content</li>
+
+                                <li data-en="Form validation" data-mr="फॉर्म व्हॅलिडेशन" data-hi="फॉर्म वेलिडेशन">Form
+                                    validation</li>
+
+                                <li data-en="Interactive UI components" data-mr="इंटरअॅक्टिव्ह UI घटक"
+                                    data-hi="इंटरएक्टिव UI कॉम्पोनेंट्स">UI components</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
-            </div>
         </section>
 
-        <!-- New Exploration Section -->
+        <!-- EXPLORATION SECTION -->
         <section id="exploration" class="exploration">
             <div class="container">
-                <h2 class="section-title">Beyond the Basics</h2>
+
+                <h2 class="section-title" data-en="Beyond the Basics" data-mr="मूलतत्त्वांपलीकडे"
+                    data-hi="बेसिक्स से आगे">
+                    Beyond the Basics
+                </h2>
+
                 <div class="exploration-content">
+
                     <div class="exploration-intro">
-                        <p>After mastering HTML and CSS fundamentals, I ventured into more advanced technologies to
-                            expand my skill
-                            set and build more dynamic, interactive web applications.</p>
+                        <p data-en="After mastering HTML and CSS, I explored advanced technologies."
+                            data-mr="HTML आणि CSS मध्ये प्राविण्य मिळवल्यानंतर मी प्रगत तंत्रज्ञानाचा अभ्यास केला."
+                            data-hi="HTML और CSS सीखने के बाद, मैंने उन्नत तकनीकों का अध्ययन किया।">
+                            After mastering HTML...
+                        </p>
                     </div>
 
                     <div class="tech-grid">
+
                         <div class="tech-card">
-                            <div class="tech-icon">
-                                <span>⚡</span>
-                            </div>
-                            <h3>JavaScript Exploration</h3>
-                            <p>Started learning JavaScript to add interactivity and dynamic behavior to web pages.
-                                Exploring concepts
-                                like:</p>
+                            <div class="tech-icon"><span>⚡</span></div>
+
+                            <h3 data-en="JavaScript Exploration" data-mr="जावास्क्रिप्टचा अभ्यास"
+                                data-hi="जावास्क्रिप्ट अध्ययन">
+                                JavaScript Exploration
+                            </h3>
+
+                            <p data-en="Started learning JavaScript to build interactive web pages."
+                                data-mr="इंटरअॅक्टिव्ह वेबपेज तयार करण्यासाठी जावास्क्रिप्ट शिकायला सुरुवात केली."
+                                data-hi="इंटरएक्टिव वेबपेज बनाने के लिए जावास्क्रिप्ट सीखना शुरू किया।">
+                                Started learning JavaScript...
+                            </p>
+
                             <ul>
-                                <li>DOM Manipulation</li>
-                                <li>Event Handling</li>
-                                <li>ES6+ Features</li>
-                                <li>Async Programming</li>
-                                <li>API Integration</li>
+                                <li data-en="DOM Manipulation" data-mr="DOM हाताळणी" data-hi="DOM मैनिपुलेशन">DOM</li>
+                                <li data-en="Event Handling" data-mr="इव्हेंट हँडलिंग" data-hi="इवेंट हैंडलिंग">Events
+                                </li>
+                                <li data-en="ES6+ Features" data-mr="ES6+ वैशिष्ट्ये" data-hi="ES6+ फीचर्स">ES6+</li>
+                                <li data-en="Async Programming" data-mr="असिंक्रोनस प्रोग्रामिंग"
+                                    data-hi="असिंक्रोनस प्रोग्रामिंग">Async</li>
+                                <li data-en="API Integration" data-mr="API एकीकरण" data-hi="API इंटीग्रेशन">API</li>
                             </ul>
                         </div>
 
                         <div class="tech-card">
-                            <div class="tech-icon">
-                                <span>🚀</span>
-                            </div>
-                            <h3>Next.js Framework</h3>
-                            <p>Exploring modern React framework for production-grade applications:</p>
+                            <div class="tech-icon"><span>🚀</span></div>
+
+                            <h3 data-en="Next.js Framework" data-mr="Next.js फ्रेमवर्क" data-hi="Next.js फ्रेमवर्क">
+                                Next.js Framework
+                            </h3>
+
+                            <p data-en="Exploring modern React framework for production-grade applications."
+                                data-mr="उत्पादन-स्तरीय अॅप्ससाठी आधुनिक React फ्रेमवर्कचा अभ्यास करत आहे."
+                                data-hi="प्रोडक्शन-ग्रेड ऐप्स के लिए आधुनिक React फ्रेमवर्क सीख रहा हूँ।">
+                                Exploring Next.js...
+                            </p>
+
                             <ul>
-                                <li>Server-Side Rendering</li>
-                                <li>Static Site Generation</li>
-                                <li>API Routes</li>
-                                <li>File-based Routing</li>
-                                <li>Performance Optimization</li>
+                                <li data-en="Server-Side Rendering" data-mr="सर्व्हर-साइड रेंडरिंग"
+                                    data-hi="सर्वर-साइड रेंडरिंग">SSR</li>
+                                <li data-en="Static Site Generation" data-mr="स्टॅटिक साइट जनरेशन"
+                                    data-hi="स्टैटिक साइट जनरेशन">SSG</li>
+                                <li data-en="API Routes" data-mr="API रूट्स" data-hi="API रूट्स">API</li>
+                                <li data-en="File-based Routing" data-mr="फाइल-आधारित रूटिंग"
+                                    data-hi="फाइल-बेस्ड रूटिंग">Routing</li>
+                                <li data-en="Performance Optimization" data-mr="परफॉर्मन्स ऑप्टिमायझेशन"
+                                    data-hi="प्रदर्शन अनुकूलन">Performance</li>
                             </ul>
                         </div>
 
                         <div class="tech-card">
-                            <div class="tech-icon">
-                                <span>🔗</span>
-                            </div>
-                            <h3>Real Projects Integration</h3>
-                            <p>Applying new knowledge to enhance existing projects:</p>
+                            <div class="tech-icon"><span>🔗</span></div>
+
+                            <h3 data-en="Real Projects Integration" data-mr="खरे प्रकल्प एकीकरण"
+                                data-hi="वास्तविक प्रोजेक्ट्स इंटीग्रेशन">
+                                Real Projects Integration
+                            </h3>
+
+                            <p data-en="Applying new knowledge to enhance real projects."
+                                data-mr="नवीन ज्ञान वापरून प्रकल्प अधिक चांगले केले."
+                                data-hi="नया ज्ञान वास्तविक प्रोजेक्ट्स में लागू किया।">
+                                Applying new knowledge...
+                            </p>
+
                             <ul>
-                                <li>Adding interactive features</li>
-                                <li>Implementing dynamic content</li>
-                                <li>Building responsive components</li>
-                                <li>Optimizing performance</li>
-                                <li>Modern development workflows</li>
+                                <li data-en="Adding interactive features" data-mr="इंटरअॅक्टिव्ह फिचर्स जोडणे"
+                                    data-hi="इंटरएक्टिव फीचर्स जोड़ना"></li>
+                                <li data-en="Dynamic content implementation" data-mr="डायनॅमिक कंटेंट अंमलबजावणी"
+                                    data-hi="डायनामिक कंटेंट लागू करना"></li>
+                                <li data-en="Building responsive components" data-mr="रेस्पॉन्सिव्ह कॉम्पोनेंट्स बनवणे"
+                                    data-hi="रेस्पॉन्सिव कॉम्पोनेंट्स बनाना"></li>
+                                <li data-en="Improving performance" data-mr="परफॉर्मन्स सुधारणा"
+                                    data-hi="प्रदर्शन सुधारना"></li>
+                                <li data-en="Modern workflows" data-mr="आधुनिक कार्यप्रवाह" data-hi="आधुनिक वर्कफ्लो">
+                                </li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- LANGUAGE SWITCHER SCRIPT -->
+    <script>
+        document.getElementById("languageSwitcher").addEventListener("change", function () {
+            applyLanguage(this.value);
+        });
+
+        function applyLanguage(lang) {
+            document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
+
     <script src="assets/js/index.js"></script>
+
 </body>
 
 </html>

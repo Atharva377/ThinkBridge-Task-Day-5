@@ -4,150 +4,395 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Journey - Atharva Senapati</title>
+
+    <title data-en="Learning Journey - Atharva Senapati" data-mr="शिकण्याचा प्रवास - अथर्व सेनापती"
+        data-hi="सीखने की यात्रा - अथर्व सेनापति">
+        Learning Journey - Atharva Senapati
+    </title>
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
+
+    <style>
+        .language-selector select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        @media(max-width: 900px) {
+            header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <h1>Atharva Senapati</h1>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="journey.html">Learning Journey</a></li>
-        <li><a href="javascript-journey.html">JavaScript Journey</a></li>
-      </ul>
-    </nav>
- 
-  </div>
-</header>
+
+    <header class="header">
+        <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+
+            <div class="logo">
+                <h1 data-en="Atharva Senapati" data-mr="अथर्व सेनापती" data-hi="अथर्व सेनापति">
+                    Atharva Senapati
+                </h1>
+            </div>
+
+            <nav class="nav">
+                <ul style="display:flex; gap:20px;">
+                    <li><a href="index.html" data-en="Home" data-mr="मुख्यपृष्ठ" data-hi="मुखपृष्ठ">Home</a></li>
+
+                    <li><a href="about.html" data-en="About" data-mr="माझ्याबद्दल" data-hi="मेरे बारे में">About</a>
+                    </li>
+
+                    <li><a href="skills.html" data-en="Skills" data-mr="कौशल्ये" data-hi="कौशल">Skills</a></li>
+
+                    <li><a href="journey.html" data-en="Learning Journey" data-mr="शिकण्याचा प्रवास"
+                            data-hi="सीखने की यात्रा">
+                            Learning Journey</a></li>
+
+                    <li><a href="javascript-journey.html" data-en="JavaScript Journey" data-mr="जावास्क्रिप्ट प्रवास"
+                            data-hi="जावास्क्रिप्ट यात्रा">
+                            JavaScript Journey</a></li>
+                </ul>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="language-selector">
+                <select id="languageSwitcher">
+                    <option value="en" selected>English</option>
+                    <option value="mr">मराठी</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+            </div>
+
+        </div>
     </header>
 
     <main>
-        <!-- Learning Journey Section -->
+
         <section class="journey">
             <div class="container">
-                <h2 class="section-title">My 5-Day Learning Journey</h2>
+
+                <h2 class="section-title" data-en="My 5-Day Learning Journey" data-mr="माझा ५ दिवसांचा शिकण्याचा प्रवास"
+                    data-hi="मेरी 5-दिवसीय सीखने की यात्रा">
+                    My 5-Day Learning Journey
+                </h2>
+
                 <div class="timeline">
-                    <!-- Timeline items from original file -->
+
+                    <!-- DAY 1 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">1</div>
                         <div class="timeline-content">
-                            <h3>Day 1: Web Fundamentals</h3>
-                            <div class="timeline-date">Foundation Building</div>
-                            <p>Started with the core concepts of frontend development - understanding how HTML, CSS, and
-                                JavaScript
-                                work together to create structured and interactive web pages.</p>
+
+                            <h3 data-en="Day 1: Web Fundamentals" data-mr="दिवस १: वेब मूलतत्त्वे"
+                                data-hi="दिन 1: वेब की मूल बातें">
+                                Day 1: Web Fundamentals
+                            </h3>
+
+                            <div class="timeline-date" data-en="Foundation Building" data-mr="पायाभूत बांधणी"
+                                data-hi="मूलभूत नींव">
+                                Foundation Building
+                            </div>
+
+                            <p data-en="Started with the core concepts of frontend development - understanding how HTML, CSS, and JavaScript work together to create structured and interactive web pages."
+                                data-mr="फ्रंटएंड विकासाच्या मुख्य संकल्पनांपासून सुरुवात केली - HTML, CSS आणि JavaScript एकत्र कसे काम करतात हे समजून घेतले."
+                                data-hi="फ्रंटएंड डेवलपमेंट की मूल अवधारणाओं से शुरुआत की - HTML, CSS और JavaScript मिलकर कैसे काम करते हैं, यह समझा।">
+                                Started with the core concepts...
+                            </p>
+
                             <ul>
-                                <li>HTML structure and semantics</li>
-                                <li>Metadata and the &lt;head&gt; tag</li>
-                                <li>CSS color models including RGBA and HSLA</li>
-                                <li>Basic page structure and organization</li>
+                                <li data-en="HTML structure and semantics" data-mr="HTML रचना आणि सिमॅंटिक्स"
+                                    data-hi="HTML संरचना और सिमेंटिक्स">
+                                    HTML structure and semantics
+                                </li>
+
+                                <li data-en="Metadata and the <head> tag" data-mr="मेटाडेटा आणि <head> टॅग"
+                                    data-hi="मेटाडेटा और <head> टैग">
+                                    Metadata and the &lt;head&gt; tag
+                                </li>
+
+                                <li data-en="CSS color models including RGBA and HSLA"
+                                    data-mr="RGBA आणि HSLA सहित CSS रंग मॉडेल्स"
+                                    data-hi="RGBA और HSLA सहित CSS रंग मॉडल">
+                                    CSS color models including RGBA and HSLA
+                                </li>
+
+                                <li data-en="Basic page structure and organization"
+                                    data-mr="पेजची मूलभूत रचना आणि मांडणी" data-hi="वेबपेज की मूलभूत संरचना और संगठन">
+                                    Basic page structure and organization
+                                </li>
                             </ul>
+
                         </div>
                     </div>
 
+
+                    <!-- DAY 2 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">2</div>
                         <div class="timeline-content">
-                            <h3>Day 2: CSS Mastery</h3>
-                            <div class="timeline-date">Styling & Layout</div>
-                            <p>Deepened my CSS knowledge by learning about the box model, positioning elements
-                                effectively, working
-                                with typography, and creating gradients and backgrounds for enhanced visual appeal.</p>
+
+                            <h3 data-en="Day 2: CSS Mastery" data-mr="दिवस २: CSS प्राविण्य"
+                                data-hi="दिन 2: CSS में महारत">
+                                Day 2: CSS Mastery
+                            </h3>
+
+                            <div class="timeline-date" data-en="Styling & Layout" data-mr="स्टाइलिंग आणि लेआउट"
+                                data-hi="स्टाइलिंग और लेआउट">
+                                Styling & Layout
+                            </div>
+
+                            <p data-en="Deepened my CSS knowledge by learning about the box model, positioning elements effectively, working with typography, and creating gradients and backgrounds."
+                                data-mr="CSS ज्ञान अधिक सखोल केले - बॉक्स मॉडेल, पोझिशनिंग, टायपोग्राफी, ग्रेडियंट्स आणि बॅकग्राउंड्स समजले."
+                                data-hi="CSS ज्ञान को गहराई से सीखा — बॉक्स मॉडल, पोजीशनिंग, टाइपोग्राफी, ग्रेडिएंट्स और बैकग्राउंड्स समझे।">
+                                Deepened my CSS knowledge…
+                            </p>
+
                             <ul>
-                                <li>CSS Box Model fundamentals</li>
-                                <li>Element positioning (static, relative, absolute, fixed)</li>
-                                <li>Typography principles and web fonts</li>
-                                <li>Creating gradients and background effects</li>
-                                <li>Layout techniques and spacing</li>
+                                <li data-en="CSS Box Model fundamentals" data-mr="CSS बॉक्स मॉडेलची मूलतत्त्वे"
+                                    data-hi="CSS बॉक्स मॉडल की मूल बातें">
+                                    CSS Box Model fundamentals
+                                </li>
+
+                                <li data-en="Element positioning (static, relative, absolute, fixed)"
+                                    data-mr="घटक स्थान (static, relative, absolute, fixed)"
+                                    data-hi="एलीमेंट पोजीशनिंग (static, relative, absolute, fixed)">
+                                    Element positioning (static, relative, absolute, fixed)
+                                </li>
+
+                                <li data-en="Typography principles and web fonts"
+                                    data-mr="टायपोग्राफीचे तत्त्व आणि वेब फॉंट्स"
+                                    data-hi="टाइपोग्राफी सिद्धांत और वेब फॉन्ट्स">
+                                    Typography principles and web fonts
+                                </li>
+
+                                <li data-en="Creating gradients and background effects"
+                                    data-mr="ग्रेडियंट्स आणि बॅकग्राउंड इफेक्ट्स तयार करणे"
+                                    data-hi="ग्रेडिएंट्स और बैकग्राउंड इफेक्ट्स बनाना">
+                                    Creating gradients and background effects
+                                </li>
+
+                                <li data-en="Layout techniques and spacing" data-mr="लेआउट तंत्र आणि स्पेसिंग"
+                                    data-hi="लेआउट तकनीकें और स्पेसिंग">
+                                    Layout techniques and spacing
+                                </li>
                             </ul>
+
                         </div>
                     </div>
 
+
+                    <!-- DAY 3 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">3</div>
                         <div class="timeline-content">
-                            <h3>Day 3: Content & Structure</h3>
-                            <div class="timeline-date">Advanced HTML</div>
-                            <p>Learned to structure and present content better by exploring lists, embedding media using
-                                video, audio,
-                                and iframes, designing forms, organizing data in tables, and writing cleaner, more
-                                efficient HTML and
-                                CSS code.</p>
+
+                            <h3 data-en="Day 3: Content & Structure" data-mr="दिवस ३: कंटेंट आणि रचना"
+                                data-hi="दिन 3: कंटेंट और स्ट्रक्चर">
+                                Day 3: Content & Structure
+                            </h3>
+
+                            <div class="timeline-date" data-en="Advanced HTML" data-mr="प्रगत HTML"
+                                data-hi="उन्नत HTML">
+                                Advanced HTML
+                            </div>
+
+                            <p data-en="Learned to structure and present content using lists, media embedding, forms, tables and writing clean HTML/CSS code."
+                                data-mr="लिस्ट, मीडिया एम्बेडिंग, फॉर्म्स, टेबल्स आणि स्वच्छ HTML/CSS कोडद्वारे कंटेंटचे संरचना शिकले."
+                                data-hi="लिस्ट, मीडिया एम्बेडिंग, फॉर्म, टेबल्स और साफ HTML/CSS कोड का उपयोग करके कंटेंट संरचना सीखी।">
+                                Learned to structure content...
+                            </p>
+
                             <ul>
-                                <li>Working with different list types</li>
-                                <li>Embedding media (video, audio, iframes)</li>
-                                <li>Form design and input types</li>
-                                <li>Data tables and organization</li>
-                                <li>Writing semantic and accessible code</li>
+                                <li data-en="Working with different list types"
+                                    data-mr="विविध लिस्ट प्रकारांसह काम करणे"
+                                    data-hi="विभिन्न सूची प्रकारों पर काम करना">
+                                    Working with different list types
+                                </li>
+
+                                <li data-en="Embedding media (video, audio, iframes)"
+                                    data-mr="मीडिया एम्बेडिंग (video, audio, iframes)"
+                                    data-hi="मीडिया एम्बेडिंग (video, audio, iframes)">
+                                    Embedding media (video, audio, iframes)
+                                </li>
+
+                                <li data-en="Form design and input types" data-mr="फॉर्म डिझाइन आणि इनपुट प्रकार"
+                                    data-hi="फॉर्म डिज़ाइन और इनपुट प्रकार">
+                                    Form design and input types
+                                </li>
+
+                                <li data-en="Data tables and organization" data-mr="डेटा टेबल्स आणि मांडणी"
+                                    data-hi="डेटा टेबल्स और संगठन">
+                                    Data tables and organization
+                                </li>
+
+                                <li data-en="Writing semantic and accessible code"
+                                    data-mr="सिमॅंटिक आणि ऍक्सेसिबल कोड लिहिणे"
+                                    data-hi="सिमेंटिक और एक्सेसिबल कोड लिखना">
+                                    Writing semantic and accessible code
+                                </li>
                             </ul>
+
                         </div>
                     </div>
 
+                    <!-- DAY 4 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">4</div>
                         <div class="timeline-content">
-                            <h3>Day 4: Tools & Workflow</h3>
-                            <div class="timeline-date">Developer Environment</div>
-                            <p>Focused on practical tools and workflows - exploring VS Code fundamentals, extensions
-                                like Prettier,
-                                Live Server, and ESLint, along with Git basics such as initializing repositories,
-                                writing meaningful
-                                commits, and managing version control efficiently.</p>
+
+                            <h3 data-en="Day 4: Tools & Workflow" data-mr="दिवस ४: साधने आणि कार्यप्रवाह"
+                                data-hi="दिन 4: टूल्स और वर्कफ्लो">
+                                Day 4: Tools & Workflow
+                            </h3>
+
+                            <div class="timeline-date" data-en="Developer Environment" data-mr="विकासक वातावरण"
+                                data-hi="डेवलपर वातावरण">
+                                Developer Environment
+                            </div>
+
+                            <p data-en="Focused on practical tools and workflows - exploring VS Code, extensions like Prettier, Live Server, ESLint, and Git basics such as repositories, commits, and version control."
+                                data-mr="व्यावहारिक साधने आणि कार्यप्रवाहांवर लक्ष केंद्रित केले - VS Code, Prettier, Live Server, ESLint आणि Git ची मूलभूत माहिती शिकली."
+                                data-hi="व्यावहारिक टूल्स और वर्कफ्लो सीखे — VS Code, Prettier, Live Server, ESLint और Git की बेसिक्स जैसे रिपॉजिटरी, कमिट्स और संस्करण नियंत्रण।">
+                                Focused on practical tools...
+                            </p>
+
                             <ul>
-                                <li>VS Code setup and customization</li>
-                                <li>Essential extensions for web development</li>
-                                <li>Git basics and repository management</li>
-                                <li>Version control workflows</li>
-                                <li>Code formatting and quality tools</li>
+                                <li data-en="VS Code setup and customization" data-mr="VS Code सेटअप आणि सानुकूलन"
+                                    data-hi="VS Code सेटअप और कस्टमाइज़ेशन">
+                                    VS Code setup and customization
+                                </li>
+
+                                <li data-en="Essential extensions for web development"
+                                    data-mr="वेब विकासासाठी आवश्यक विस्तार"
+                                    data-hi="वेब डेवलपमेंट के लिए आवश्यक एक्सटेंशन">
+                                    Essential extensions for web development
+                                </li>
+
+                                <li data-en="Git basics and repository management"
+                                    data-mr="Git मूलतत्त्वे आणि रिपॉजिटरी व्यवस्थापन"
+                                    data-hi="Git बेसिक्स और रिपॉजिटरी प्रबंधन">
+                                    Git basics and repository management
+                                </li>
+
+                                <li data-en="Version control workflows" data-mr="वर्जन कंट्रोल वर्कफ्लो"
+                                    data-hi="वर्जन कंट्रोल वर्कफ्लोज़">
+                                    Version control workflows
+                                </li>
+
+                                <li data-en="Code formatting and quality tools"
+                                    data-mr="कोड फॉरमॅटिंग आणि गुणवत्ता साधने"
+                                    data-hi="कोड फॉर्मेटिंग और गुणवत्ता उपकरण">
+                                    Code formatting and quality tools
+                                </li>
                             </ul>
+
                         </div>
                     </div>
 
+
+                    <!-- DAY 5 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">5</div>
                         <div class="timeline-content">
-                            <h3>Day 5: Hands-On Implementation</h3>
-                            <div class="timeline-date">Practical Application</div>
-                            <p>Applied all learned concepts to build a complete personal portfolio website from scratch,
-                                implementing
-                                responsive design, modern CSS features, and deploying the project using Git and GitHub.
+
+                            <h3 data-en="Day 5: Hands-On Implementation" data-mr="दिवस ५: प्रत्यक्ष अंमलबजावणी"
+                                data-hi="दिन 5: व्यावहारिक अनुप्रयोग">
+                                Day 5: Hands-On Implementation
+                            </h3>
+
+                            <div class="timeline-date" data-en="Practical Application" data-mr="प्रत्यक्ष अनुप्रयोग"
+                                data-hi="व्यावहारिक अनुप्रयोग">
+                                Practical Application
+                            </div>
+
+                            <p data-en="Applied all learned concepts to build a complete personal portfolio website with responsive design, modern CSS features, and Git/GitHub deployment."
+                                data-mr="शिकलेल्या सर्व संकल्पनांचा वापर करून प्रतिसादशील डिझाइन, आधुनिक CSS वैशिष्ट्ये आणि Git/GitHub वापरून पूर्ण पोर्टफोलिओ वेबसाइट तयार केली."
+                                data-hi="सीखे हुए सभी कॉन्सेप्ट्स का उपयोग कर प्रतिक्रिया-सक्षम डिज़ाइन, आधुनिक CSS फीचर्स और Git/GitHub के साथ पूरी पोर्टफोलियो वेबसाइट बनाई।">
+                                Applied all learned concepts...
                             </p>
+
                             <ul>
-                                <li>Built complete portfolio website with HTML & CSS</li>
-                                <li>Implemented responsive design principles</li>
-                                <li>Used CSS Grid and Flexbox for layouts</li>
-                                <li>Applied CSS variables and modern styling</li>
-                                <li>Version control with Git and GitHub deployment</li>
-                                <li>Explored JavaScript and Next.js fundamentals</li>
-                                <li>Added favicon and professional touchups</li>
+                                <li data-en="Built full portfolio website using HTML & CSS"
+                                    data-mr="HTML आणि CSS वापरून संपूर्ण पोर्टफोलिओ वेबसाइट तयार केली"
+                                    data-hi="HTML और CSS का उपयोग करके पूरा पोर्टफोलियो बनाया"></li>
+
+                                <li data-en="Implemented responsive design principles"
+                                    data-mr="प्रतिसादशील डिझाइन तत्त्वे अंमलात आणली"
+                                    data-hi="रेस्पॉन्सिव डिज़ाइन सिद्धांत लागू किए"></li>
+
+                                <li data-en="Used CSS Grid and Flexbox" data-mr="CSS Grid आणि Flexbox वापरले"
+                                    data-hi="CSS Grid और Flexbox का उपयोग किया"></li>
+
+                                <li data-en="Applied CSS variables and modern styling"
+                                    data-mr="CSS व्हेरिएबल्स आणि आधुनिक स्टाइलिंग वापरले"
+                                    data-hi="CSS वेरिएबल्स और आधुनिक स्टाइलिंग लागू की"></li>
+
+                                <li data-en="Git version control and GitHub deployment"
+                                    data-mr="Git वर्जन कंट्रोल आणि GitHub डिप्लॉयमेंट"
+                                    data-hi="Git वर्जन कंट्रोल और GitHub डिप्लॉयमेंट"></li>
+
+                                <li data-en="Explored JavaScript and Next.js basics"
+                                    data-mr="JavaScript आणि Next.js ची मूलभूत माहिती शिकली"
+                                    data-hi="JavaScript और Next.js बेसिक्स सीखे"></li>
+
+                                <li data-en="Added favicon and finishing touches"
+                                    data-mr="फेव्हिकॉन आणि अंतिम सजावट जोडली" data-hi="फेविकॉन और अंतिम सुधार जोड़े">
+                                </li>
                             </ul>
+
                         </div>
                     </div>
-                </div>
+                </div> <!-- END TIMELINE -->
+
+
+                <!-- JOURNEY SUMMARY -->
                 <div class="journey-summary">
-                    <h3>Key Takeaways</h3>
-                    <p>These five intensive days have transformed my understanding of web development. I've progressed
-                        from
-                        learning basic HTML tags to building a fully responsive portfolio website, implementing modern
-                        CSS
-                        techniques, and mastering essential development tools. The hands-on experience solidified my
-                        knowledge and
-                        gave me confidence to tackle real-world web development projects.</p>
+
+                    <h3 data-en="Key Takeaways" data-mr="मुख्य शिकवण" data-hi="मुख्य निष्कर्ष">
+                        Key Takeaways
+                    </h3>
+
+                    <p data-en="These five days transformed my understanding of web development — from learning basic HTML tags to building a fully responsive portfolio website and mastering essential development tools."
+                        data-mr="या पाच दिवसांनी माझे वेब विकासाबद्दलचे आकलन पूर्णपणे बदलले — मूलभूत HTML टॅगपासून ते पूर्ण प्रतिसादशील पोर्टफोलिओ वेबसाइट तयार करणे आणि आवश्यक साधनांवर प्रभुत्व मिळवणे."
+                        data-hi="इन पाँच दिनों ने मेरे वेब डेवलपमेंट ज्ञान को बदल दिया — बेसिक HTML टैग सीखने से लेकर पूरी रेस्पॉन्सिव पोर्टफोलियो वेबसाइट बनाने और ज़रूरी टूल्स में महारत हासिल करने तक।">
+                        These five days transformed my understanding...
+                    </p>
+
                 </div>
-            </div>
+
             </div>
         </section>
+
     </main>
 
+
+    <!-- LANGUAGE SWITCHER SCRIPT -->
+    <script>
+        document.getElementById("languageSwitcher")
+            .addEventListener("change", function () {
+                applyLanguage(this.value);
+            });
+
+        function applyLanguage(lang) {
+            document.querySelectorAll("[data-" + lang + "]")
+                .forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                });
+        }
+    </script>
+
     <script src="assets/js/index.js"></script>
+
 </body>
 
 </html>

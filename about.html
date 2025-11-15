@@ -7,75 +7,176 @@
   <title>About - Atharva Senapati</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
+
+  <style>
+    /* Responsive tweaks for translation dropdown */
+    .lang-select {
+      margin-left: auto;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .header .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .lang-select {
+        align-self: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <h1>Atharva Senapati</h1>
+  <header class="header">
+    <div class="container" style="display:flex; align-items:center; gap:20px;">
+      <div class="logo">
+        <h1>Atharva Senapati</h1>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="journey.html">Learning Journey</a></li>
+          <li><a href="javascript-journey.html">JavaScript Journey</a></li>
+        </ul>
+      </nav>
+
+      <!-- 🔥 Language Selector -->
+      <select id="languageSelect" class="lang-select">
+        <option value="en" selected>English</option>
+        <option value="mr">Marathi</option>
+        <option value="hi">Hindi</option>
+      </select>
     </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="journey.html">Learning Journey</a></li>
-        <li><a href="javascript-journey.html">JavaScript Journey</a></li>
-      </ul>
-    </nav>
-  
-  </div>
-</header>
+  </header>
 
   <main>
-    <!-- About Section -->
     <section class="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title translate" data-key="aboutTitle">About Me</h2>
+
         <div class="about-content">
           <div class="about-text">
-            <p>
+
+            <p class="translate" data-key="p1">
               I'm Atharva Senapati, an aspiring web developer with a passion
-              for creating clean, user-friendly websites. Over the past four
-              days, I've been deeply immersing myself in web development
-              fundamentals.
+              for creating clean, user-friendly websites.
             </p>
 
-            <p>
+            <p class="translate" data-key="p2">
               My journey started with understanding the core structure of web
               pages using HTML, then progressed to styling with CSS, and
-              finally exploring practical tools that make development
-              efficient and organized.
+              finally exploring practical tools that make development efficient.
             </p>
 
-            <p>
-              I believe in writing semantic, accessible code that not only
-              functions well but also provides an excellent user experience
-              across all devices.
+            <p class="translate" data-key="p3">
+              I believe in writing semantic, accessible code that provides an excellent user experience across devices.
             </p>
 
             <div class="about-features">
               <div class="feature">
-                <h3>Clean Code</h3>
-                <p>Writing readable, maintainable HTML and CSS</p>
+                <h3 class="translate" data-key="f1_title">Clean Code</h3>
+                <p class="translate" data-key="f1_desc">Writing readable, maintainable HTML and CSS</p>
               </div>
+
               <div class="feature">
-                <h3>Responsive Design</h3>
-                <p>Creating layouts that work on all devices</p>
+                <h3 class="translate" data-key="f2_title">Responsive Design</h3>
+                <p class="translate" data-key="f2_desc">Creating layouts that work on all devices</p>
               </div>
+
               <div class="feature">
-                <h3>Modern Workflow</h3>
-                <p>Using tools that enhance productivity</p>
+                <h3 class="translate" data-key="f3_title">Modern Workflow</h3>
+                <p class="translate" data-key="f3_desc">Using tools that enhance productivity</p>
               </div>
+
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
 
+  <!-- Your existing JS -->
   <script src="assets/js/index.js"></script>
+
+  <!-- 🔥 Language Translation Script -->
+  <script>
+    const translations = {
+      en: {
+        aboutTitle: "About Me",
+        p1: "I'm Atharva Senapati, an aspiring web developer with a passion for creating clean, user-friendly websites.",
+        p2: "My journey started with understanding the core structure of web pages using HTML, then progressed to styling with CSS, and exploring practical tools that make development efficient.",
+        p3: "I believe in writing semantic, accessible code that provides an excellent user experience across devices.",
+
+        f1_title: "Clean Code",
+        f1_desc: "Writing readable, maintainable HTML and CSS",
+
+        f2_title: "Responsive Design",
+        f2_desc: "Creating layouts that work on all devices",
+
+        f3_title: "Modern Workflow",
+        f3_desc: "Using tools that enhance productivity"
+      },
+
+      mr: {
+        aboutTitle: "माझ्याबद्दल",
+        p1: "मी अथर्व सेनापति, स्वच्छ आणि वापरकर्ता-अनुकूल वेबसाइट तयार करण्याची आवड असलेला एक उभरता वेब डेव्हलपर आहे.",
+        p2: "माझी यात्रा HTML च्या मदतीने वेब पेजची मूलभूत रचना समजून घेण्यातून सुरू झाली आणि नंतर CSS ने स्टाइलिंग आणि इतर उपयुक्त साधनांकडे गेली.",
+        p3: "मी सर्व डिव्हाइसवर उत्कृष्ट अनुभव देणारा, सिमॅंटिक व अॅक्सेसिबल कोड लिहिण्यावर विश्वास ठेवतो.",
+
+        f1_title: "स्वच्छ कोड",
+        f1_desc: "वाचण्यास सोपा आणि व्यवस्थित HTML व CSS लिहिणे",
+
+        f2_title: "प्रतिसादक्षम डिझाइन",
+        f2_desc: "सर्व डिव्हाइसवर योग्य दिसणारी लेआउट तयार करणे",
+
+        f3_title: "आधुनिक वर्कफ्लो",
+        f3_desc: "उत्पादकता वाढवणारी साधने वापरणे"
+      },
+
+      hi: {
+        aboutTitle: "मेरे बारे में",
+        p1: "मैं अथर्व सेनापति हूँ, एक उभरता हुआ वेब डेवलपर जिसे साफ-सुथरी और उपयोगकर्ता-अनुकूल वेबसाइट बनाना पसंद है।",
+        p2: "मेरी यात्रा HTML से वेब पेज की संरचना समझने से शुरू हुई, फिर CSS से स्टाइलिंग और बाद में विकास को आसान बनाने वाले टूल्स की ओर बढ़ी।",
+        p3: "मैं ऐसा सिमेंटिक और एक्सेसिबल कोड लिखने में विश्वास रखता हूँ जो सभी डिवाइस पर बेहतरीन अनुभव दे।",
+
+        f1_title: "साफ कोड",
+        f1_desc: "पढ़ने में आसान और मेंटेन करने योग्य HTML और CSS लिखना",
+
+        f2_title: "रेस्पॉन्सिव डिज़ाइन",
+        f2_desc: "ऐसा लेआउट बनाना जो सभी डिवाइस पर अच्छा दिखे",
+
+        f3_title: "आधुनिक वर्कफ़्लो",
+        f3_desc: "उत्पादकता बढ़ाने वाले टूल्स का उपयोग"
+      }
+    };
+
+    const langSelect = document.getElementById("languageSelect");
+    const translatable = document.querySelectorAll(".translate");
+
+    function applyLanguage(lang) {
+      translatable.forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.textContent = translations[lang][key];
+      });
+    }
+
+    langSelect.addEventListener("change", () => {
+      applyLanguage(langSelect.value);
+    });
+
+    // Load English by default
+    applyLanguage("en");
+  </script>
+
 </body>
 
 </html>
