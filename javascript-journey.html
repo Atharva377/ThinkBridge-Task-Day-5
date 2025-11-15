@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Journey - Atharva Senapati</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Atharva Senapati</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="journey.html">Learning Journey</a></li>
+                    <li><a href="javascript-journey.html">JavaScript Journey</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- JavaScript Journey Section -->
+        <section class="journey">
+            <div class="container">
+                <h2 class="section-title">JavaScript Learning Journey (Day 6-12)</h2>
+
+                <!-- Interactive JavaScript Demo -->
+                <!-- Interactive JavaScript Demo -->
+                <div class="javascript-demo">
+                    <h3>Interactive JavaScript Demonstrations</h3>
+
+                    <!-- Logical Operators Demo -->
+                    <div class="demo-section">
+                        <h4>Logical Operators & Functions</h4>
+                        <div class="demo-controls">
+                            <input type="number" id="numberInput" placeholder="Enter a number" class="demo-input">
+                            <button onclick="checkNumber()" class="btn btn-primary">Check Number</button>
+                            <button onclick="demonstrateClosure()" class="btn btn-secondary">Closure Demo</button>
+                        </div>
+                        <div id="logicalOutput" class="demo-output"></div>
+                    </div>
+
+                    <!-- Objects and Methods Demo -->
+                    <div class="demo-section">
+                        <h4>Objects, Getters & Setters</h4>
+                        <div class="demo-controls">
+                            <button onclick="createStudentObject()" class="btn btn-primary">Create Student
+                                Object</button>
+                            <button onclick="useGetterSetter()" class="btn btn-secondary">Getter/Setter Demo</button>
+                        </div>
+                        <div id="objectOutput" class="demo-output"></div>
+                    </div>
+
+                    <!-- Proxy and Currying Demo -->
+                    <div class="demo-section">
+                        <h4>Proxy & Currying</h4>
+                        <div class="demo-controls">
+                            <button onclick="demonstrateProxy()" class="btn btn-primary">Proxy Demo</button>
+                            <button onclick="demonstrateCurrying()" class="btn btn-secondary">Currying Demo</button>
+                        </div>
+                        <div id="advancedOutput" class="demo-output"></div>
+                    </div>
+
+                    <!-- Interactive Counter -->
+                    <div class="demo-section">
+                        <h4>Interactive Counter with Closure</h4>
+                        <div class="counter-controls">
+                            <button onclick="decrementCounter()" class="btn btn-secondary">-</button>
+                            <span id="counterValue" class="counter-display">0</span>
+                            <button onclick="incrementCounter()" class="btn btn-primary">+</button>
+                            <button onclick="resetCounter()" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">6</div>
+                        <div class="timeline-content">
+                            <h3>Day 6: JavaScript Fundamentals</h3>
+                            <div class="timeline-date">Variables & Operators</div>
+                            <p>Started with JavaScript basics - understanding variables, data types, and logical
+                                operators for decision making in code.</p>
+                            <ul>
+                                <li>let, const, and var declarations</li>
+                                <li>Primitive data types</li>
+                                <li>Logical operators (&&, ||, !)</li>
+                                <li>Comparison operators</li>
+                                <li>Type coercion and conversion</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">7</div>
+                        <div class="timeline-content">
+                            <h3>Day 7: Functions & Scope</h3>
+                            <div class="timeline-date">Function Mastery</div>
+                            <p>Dived deep into functions - different ways to declare them, parameters, return values,
+                                and understanding scope.</p>
+                            <ul>
+                                <li>Function declarations vs expressions</li>
+                                <li>Arrow functions</li>
+                                <li>Parameters and arguments</li>
+                                <li>Return statements</li>
+                                <li>Global vs local scope</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">8</div>
+                        <div class="timeline-content">
+                            <h3>Day 8: Objects & Built-in Methods</h3>
+                            <div class="timeline-date">Object-Oriented Basics</div>
+                            <p>Learned about objects, properties, methods, and JavaScript's built-in functions for
+                                various data types.</p>
+                            <ul>
+                                <li>Object literal syntax</li>
+                                <li>Property access and modification</li>
+                                <li>Object methods</li>
+                                <li>Built-in array methods</li>
+                                <li>String methods</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">9</div>
+                        <div class="timeline-content">
+                            <h3>Day 9: Advanced Functions</h3>
+                            <div class="timeline-date">Closures & Higher-Order Functions</div>
+                            <p>Explored advanced function concepts including closures, higher-order functions, and
+                                callback patterns.</p>
+                            <ul>
+                                <li>Closure concept and practical uses</li>
+                                <li>Higher-order functions</li>
+                                <li>Callback functions</li>
+                                <li>Immediately Invoked Function Expressions (IIFE)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">10</div>
+                        <div class="timeline-content">
+                            <h3>Day 10: Classes & Prototypes</h3>
+                            <div class="timeline-date">Object-Oriented Programming</div>
+                            <p>Understood JavaScript's prototype-based inheritance and modern class syntax with getters
+                                and setters.</p>
+                            <ul>
+                                <li>Class syntax and constructor methods</li>
+                                <li>Getter and setter methods</li>
+                                <li>Static methods</li>
+                                <li>Inheritance with extends</li>
+                                <li>Prototype chain</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">11</div>
+                        <div class="timeline-content">
+                            <h3>Day 11: Advanced Concepts</h3>
+                            <div class="timeline-date">Proxy & Metaprogramming</div>
+                            <p>Learned about advanced JavaScript features including Proxy for metaprogramming and
+                                function currying.</p>
+                            <ul>
+                                <li>Proxy object and handlers</li>
+                                <li>Trap methods (get, set, apply)</li>
+                                <li>Function currying techniques</li>
+                                <li>Partial application</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">12</div>
+                        <div class="timeline-content">
+                            <h3>Day 12: Practical Implementation</h3>
+                            <div class="timeline-date">Building Interactive Features</div>
+                            <p>Applied all JavaScript concepts to build interactive features and enhance the portfolio
+                                with dynamic functionality.</p>
+                            <ul>
+                                <li>DOM manipulation</li>
+                                <li>Event handling</li>
+                                <li>Dynamic content updates</li>
+                                <li>Form validation</li>
+                                <li>Interactive UI components</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Exploration Section -->
+        <section id="exploration" class="exploration">
+            <div class="container">
+                <h2 class="section-title">Beyond the Basics</h2>
+                <div class="exploration-content">
+                    <div class="exploration-intro">
+                        <p>After mastering HTML and CSS fundamentals, I ventured into more advanced technologies to
+                            expand my skill
+                            set and build more dynamic, interactive web applications.</p>
+                    </div>
+
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <span>⚡</span>
+                            </div>
+                            <h3>JavaScript Exploration</h3>
+                            <p>Started learning JavaScript to add interactivity and dynamic behavior to web pages.
+                                Exploring concepts
+                                like:</p>
+                            <ul>
+                                <li>DOM Manipulation</li>
+                                <li>Event Handling</li>
+                                <li>ES6+ Features</li>
+                                <li>Async Programming</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <span>🚀</span>
+                            </div>
+                            <h3>Next.js Framework</h3>
+                            <p>Exploring modern React framework for production-grade applications:</p>
+                            <ul>
+                                <li>Server-Side Rendering</li>
+                                <li>Static Site Generation</li>
+                                <li>API Routes</li>
+                                <li>File-based Routing</li>
+                                <li>Performance Optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <span>🔗</span>
+                            </div>
+                            <h3>Real Projects Integration</h3>
+                            <p>Applying new knowledge to enhance existing projects:</p>
+                            <ul>
+                                <li>Adding interactive features</li>
+                                <li>Implementing dynamic content</li>
+                                <li>Building responsive components</li>
+                                <li>Optimizing performance</li>
+                                <li>Modern development workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

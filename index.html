@@ -5,37 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atharva Senapati - Web Developer</title>
-  <meta name="description" content="Personal portfolio showcasing web development skills learned over 4 days" />
+  <meta name="description" content="Personal portfolio showcasing web development skills" />
   <meta name="keywords" content="web development, HTML, CSS, frontend, Atharva Senapati" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon.png">
-  <link rel="manifest" href="assets/images/favicon/favicon.png">
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <h1>Atharva Senapati</h1>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#journey">Learning Journey</a></li>
-          <li><a href="#javascript-journey">JavaScript Journey</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
   <main>
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-image">
@@ -44,13 +24,8 @@
           <div class="hero-text">
             <h2>Hi, I'm <span class="highlight">Atharva Senapati</span></h2>
             <p>Aspiring Web Developer</p>
-            <p>
-              Passionate about creating beautiful, functional websites using
-              modern web technologies
-            </p>
+            <p>Passionate about creating beautiful, functional websites using modern web technologies</p>
             <div class="hero-buttons">
-              <a href="#about" class="btn btn-primary">Learn More</a>
-              <a href="#journey" class="btn btn-secondary">My Journey</a>
               <button id="themeToggle" class="btn btn-secondary">Toggle Theme</button>
             </div>
           </div>
@@ -58,582 +33,44 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Section Cards -->
+    <section class="section-cards">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I'm Atharva Senapati, an aspiring web developer with a passion
-              for creating clean, user-friendly websites. Over the past four
-              days, I've been deeply immersing myself in web development
-              fundamentals.
-            </p>
-
-            <p>
-              My journey started with understanding the core structure of web
-              pages using HTML, then progressed to styling with CSS, and
-              finally exploring practical tools that make development
-              efficient and organized.
-            </p>
-
-            <p>
-              I believe in writing semantic, accessible code that not only
-              functions well but also provides an excellent user experience
-              across all devices.
-            </p>
-
-            <div class="about-features">
-              <div class="feature">
-                <h3>Clean Code</h3>
-                <p>Writing readable, maintainable HTML and CSS</p>
-              </div>
-              <div class="feature">
-                <h3>Responsive Design</h3>
-                <p>Creating layouts that work on all devices</p>
-              </div>
-              <div class="feature">
-                <h3>Modern Workflow</h3>
-                <p>Using tools that enhance productivity</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <div class="skill-icon">
-              <span>📄</span>
-            </div>
-            <h3>HTML5 & Structure</h3>
-            <ul>
-              <li>Semantic HTML5 Elements</li>
-              <li>Forms & Input Types</li>
-              <li>Tables & Data Organization</li>
-              <li>Lists & Navigation</li>
-              <li>Media Embedding (Video/Audio/Iframes)</li>
-            </ul>
+        <h2 class="section-title">Explore My Journey</h2>
+        <div class="cards-grid">
+          <div class="card" onclick="location.href='about.html'">
+            <div class="card-icon">👤</div>
+            <h3>About Me</h3>
+            <p>Learn about my background, passion for web development, and approach to creating clean, user-friendly websites.</p>
+            <span class="card-link">Learn More →</span>
           </div>
 
-          <div class="skill-category">
-            <div class="skill-icon">
-              <span>🎨</span>
-            </div>
-            <h3>CSS3 & Styling</h3>
-            <ul>
-              <li>Box Model & Positioning</li>
-              <li>Flexbox & Grid Layouts</li>
-              <li>Typography & Web Fonts</li>
-              <li>Color Theory (RGBA, HSLA)</li>
-              <li>Gradients & Backgrounds</li>
-              <li>Responsive Design</li>
-              <li>Transitions & Transforms</li>
-            </ul>
+          <div class="card" onclick="location.href='skills.html'">
+            <div class="card-icon">💻</div>
+            <h3>Technical Skills</h3>
+            <p>Discover my expertise in HTML5, CSS3, modern frameworks, and development tools I've mastered.</p>
+            <span class="card-link">View Skills →</span>
           </div>
 
-          <div class="skill-category">
-            <div class="skill-icon">
-              <span>⚡</span>
-            </div>
-            <h3>Tools & Workflow</h3>
-            <ul>
-              <li>Live Server Extension</li>
-              <li>Git Version Control</li>
-              <li>GitHub Repository Management</li>
-              <li>Clean Code Practices</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning Journey Section -->
-    <section id="journey" class="journey">
-      <div class="container">
-        <h2 class="section-title">My 5-Day Learning Journey</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">1</div>
-            <div class="timeline-content">
-              <h3>Day 1: Web Fundamentals</h3>
-              <div class="timeline-date">Foundation Building</div>
-              <p>Started with the core concepts of frontend development - understanding how HTML, CSS, and JavaScript
-                work together to create structured and interactive web pages.</p>
-              <ul>
-                <li>HTML structure and semantics</li>
-                <li>Metadata and the &lt;head&gt; tag</li>
-                <li>CSS color models including RGBA and HSLA</li>
-                <li>Basic page structure and organization</li>
-              </ul>
-            </div>
+          <div class="card" onclick="location.href='journey.html'">
+            <div class="card-icon">📚</div>
+            <h3>Learning Journey</h3>
+            <p>Follow my intensive 5-day journey from web fundamentals to building complete portfolio websites.</p>
+            <span class="card-link">See Journey →</span>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker">2</div>
-            <div class="timeline-content">
-              <h3>Day 2: CSS Mastery</h3>
-              <div class="timeline-date">Styling & Layout</div>
-              <p>Deepened my CSS knowledge by learning about the box model, positioning elements effectively, working
-                with typography, and creating gradients and backgrounds for enhanced visual appeal.</p>
-              <ul>
-                <li>CSS Box Model fundamentals</li>
-                <li>Element positioning (static, relative, absolute, fixed)</li>
-                <li>Typography principles and web fonts</li>
-                <li>Creating gradients and background effects</li>
-                <li>Layout techniques and spacing</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">3</div>
-            <div class="timeline-content">
-              <h3>Day 3: Content & Structure</h3>
-              <div class="timeline-date">Advanced HTML</div>
-              <p>Learned to structure and present content better by exploring lists, embedding media using video, audio,
-                and iframes, designing forms, organizing data in tables, and writing cleaner, more efficient HTML and
-                CSS code.</p>
-              <ul>
-                <li>Working with different list types</li>
-                <li>Embedding media (video, audio, iframes)</li>
-                <li>Form design and input types</li>
-                <li>Data tables and organization</li>
-                <li>Writing semantic and accessible code</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">4</div>
-            <div class="timeline-content">
-              <h3>Day 4: Tools & Workflow</h3>
-              <div class="timeline-date">Developer Environment</div>
-              <p>Focused on practical tools and workflows - exploring VS Code fundamentals, extensions like Prettier,
-                Live Server, and ESLint, along with Git basics such as initializing repositories, writing meaningful
-                commits, and managing version control efficiently.</p>
-              <ul>
-                <li>VS Code setup and customization</li>
-                <li>Essential extensions for web development</li>
-                <li>Git basics and repository management</li>
-                <li>Version control workflows</li>
-                <li>Code formatting and quality tools</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">5</div>
-            <div class="timeline-content">
-              <h3>Day 5: Hands-On Implementation</h3>
-              <div class="timeline-date">Practical Application</div>
-              <p>Applied all learned concepts to build a complete personal portfolio website from scratch, implementing
-                responsive design, modern CSS features, and deploying the project using Git and GitHub.</p>
-              <ul>
-                <li>Built complete portfolio website with HTML & CSS</li>
-                <li>Implemented responsive design principles</li>
-                <li>Used CSS Grid and Flexbox for layouts</li>
-                <li>Applied CSS variables and modern styling</li>
-                <li>Version control with Git and GitHub deployment</li>
-                <li>Explored JavaScript and Next.js fundamentals</li>
-                <li>Added favicon and professional touchups</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="journey-summary">
-          <h3>Key Takeaways</h3>
-          <p>These five intensive days have transformed my understanding of web development. I've progressed from
-            learning basic HTML tags to building a fully responsive portfolio website, implementing modern CSS
-            techniques, and mastering essential development tools. The hands-on experience solidified my knowledge and
-            gave me confidence to tackle real-world web development projects.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- JavaScript Journey Section -->
-    <section id="javascript-journey" class="journey">
-      <div class="container">
-        <h2 class="section-title">JavaScript Learning Journey (Day 6-12)</h2>
-        
-        <!-- Interactive JavaScript Demo -->
-        <div class="javascript-demo">
-          <h3>Interactive JavaScript Demonstrations</h3>
-          
-          <!-- Logical Operators Demo -->
-          <div class="demo-section">
-            <h4>Logical Operators & Functions</h4>
-            <div class="demo-controls">
-              <input type="number" id="numberInput" placeholder="Enter a number" class="demo-input">
-              <button onclick="checkNumber()" class="btn btn-primary">Check Number</button>
-              <button onclick="demonstrateClosure()" class="btn btn-secondary">Closure Demo</button>
-            </div>
-            <div id="logicalOutput" class="demo-output"></div>
-          </div>
-
-          <!-- Objects and Methods Demo -->
-          <div class="demo-section">
-            <h4>Objects, Getters & Setters</h4>
-            <div class="demo-controls">
-              <button onclick="createStudentObject()" class="btn btn-primary">Create Student Object</button>
-              <button onclick="useGetterSetter()" class="btn btn-secondary">Getter/Setter Demo</button>
-            </div>
-            <div id="objectOutput" class="demo-output"></div>
-          </div>
-
-          <!-- Proxy and Currying Demo -->
-          <div class="demo-section">
-            <h4>Proxy & Currying</h4>
-            <div class="demo-controls">
-              <button onclick="demonstrateProxy()" class="btn btn-primary">Proxy Demo</button>
-              <button onclick="demonstrateCurrying()" class="btn btn-secondary">Currying Demo</button>
-            </div>
-            <div id="advancedOutput" class="demo-output"></div>
-          </div>
-
-          <!-- Interactive Counter -->
-          <div class="demo-section">
-            <h4>Interactive Counter with Closure</h4>
-            <div class="counter-controls">
-              <button onclick="decrementCounter()" class="btn btn-secondary">-</button>
-              <span id="counterValue" class="counter-display">0</span>
-              <button onclick="incrementCounter()" class="btn btn-primary">+</button>
-              <button onclick="resetCounter()" class="btn btn-secondary">Reset</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- JavaScript Timeline -->
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">6</div>
-            <div class="timeline-content">
-              <h3>Day 6: JavaScript Fundamentals</h3>
-              <div class="timeline-date">Variables & Operators</div>
-              <p>Started with JavaScript basics - understanding variables, data types, and logical operators for decision making in code.</p>
-              <ul>
-                <li>let, const, and var declarations</li>
-                <li>Primitive data types</li>
-                <li>Logical operators (&&, ||, !)</li>
-                <li>Comparison operators</li>
-                <li>Type coercion and conversion</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">7</div>
-            <div class="timeline-content">
-              <h3>Day 7: Functions & Scope</h3>
-              <div class="timeline-date">Function Mastery</div>
-              <p>Dived deep into functions - different ways to declare them, parameters, return values, and understanding scope.</p>
-              <ul>
-                <li>Function declarations vs expressions</li>
-                <li>Arrow functions</li>
-                <li>Parameters and arguments</li>
-                <li>Return statements</li>
-                <li>Global vs local scope</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">8</div>
-            <div class="timeline-content">
-              <h3>Day 8: Objects & Built-in Methods</h3>
-              <div class="timeline-date">Object-Oriented Basics</div>
-              <p>Learned about objects, properties, methods, and JavaScript's built-in functions for various data types.</p>
-              <ul>
-                <li>Object literal syntax</li>
-                <li>Property access and modification</li>
-                <li>Object methods</li>
-                <li>Built-in array methods</li>
-                <li>String methods</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">9</div>
-            <div class="timeline-content">
-              <h3>Day 9: Advanced Functions</h3>
-              <div class="timeline-date">Closures & Higher-Order Functions</div>
-              <p>Explored advanced function concepts including closures, higher-order functions, and callback patterns.</p>
-              <ul>
-                <li>Closure concept and practical uses</li>
-                <li>Higher-order functions</li>
-                <li>Callback functions</li>
-                <li>Immediately Invoked Function Expressions (IIFE)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">10</div>
-            <div class="timeline-content">
-              <h3>Day 10: Classes & Prototypes</h3>
-              <div class="timeline-date">Object-Oriented Programming</div>
-              <p>Understood JavaScript's prototype-based inheritance and modern class syntax with getters and setters.</p>
-              <ul>
-                <li>Class syntax and constructor methods</li>
-                <li>Getter and setter methods</li>
-                <li>Static methods</li>
-                <li>Inheritance with extends</li>
-                <li>Prototype chain</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">11</div>
-            <div class="timeline-content">
-              <h3>Day 11: Advanced Concepts</h3>
-              <div class="timeline-date">Proxy & Metaprogramming</div>
-              <p>Learned about advanced JavaScript features including Proxy for metaprogramming and function currying.</p>
-              <ul>
-                <li>Proxy object and handlers</li>
-                <li>Trap methods (get, set, apply)</li>
-                <li>Function currying techniques</li>
-                <li>Partial application</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">12</div>
-            <div class="timeline-content">
-              <h3>Day 12: Practical Implementation</h3>
-              <div class="timeline-date">Building Interactive Features</div>
-              <p>Applied all JavaScript concepts to build interactive features and enhance the portfolio with dynamic functionality.</p>
-              <ul>
-                <li>DOM manipulation</li>
-                <li>Event handling</li>
-                <li>Dynamic content updates</li>
-                <li>Form validation</li>
-                <li>Interactive UI components</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Exploration Section -->
-    <section id="exploration" class="exploration">
-      <div class="container">
-        <h2 class="section-title">Beyond the Basics</h2>
-        <div class="exploration-content">
-          <div class="exploration-intro">
-            <p>After mastering HTML and CSS fundamentals, I ventured into more advanced technologies to expand my skill
-              set and build more dynamic, interactive web applications.</p>
-          </div>
-
-          <div class="tech-grid">
-            <div class="tech-card">
-              <div class="tech-icon">
-                <span>⚡</span>
-              </div>
-              <h3>JavaScript Exploration</h3>
-              <p>Started learning JavaScript to add interactivity and dynamic behavior to web pages. Exploring concepts
-                like:</p>
-              <ul>
-                <li>DOM Manipulation</li>
-                <li>Event Handling</li>
-                <li>ES6+ Features</li>
-                <li>Async Programming</li>
-                <li>API Integration</li>
-              </ul>
-            </div>
-
-            <div class="tech-card">
-              <div class="tech-icon">
-                <span>🚀</span>
-              </div>
-              <h3>Next.js Framework</h3>
-              <p>Exploring modern React framework for production-grade applications:</p>
-              <ul>
-                <li>Server-Side Rendering</li>
-                <li>Static Site Generation</li>
-                <li>API Routes</li>
-                <li>File-based Routing</li>
-                <li>Performance Optimization</li>
-              </ul>
-            </div>
-
-            <div class="tech-card">
-              <div class="tech-icon">
-                <span>🔗</span>
-              </div>
-              <h3>Real Projects Integration</h3>
-              <p>Applying new knowledge to enhance existing projects:</p>
-              <ul>
-                <li>Adding interactive features</li>
-                <li>Implementing dynamic content</li>
-                <li>Building responsive components</li>
-                <li>Optimizing performance</li>
-                <li>Modern development workflows</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Skills Section -->
-    <section id="technical" class="technical">
-      <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-          <div class="skills-category">
-            <h3>Programming Languages</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Frameworks & Libraries</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Django</span>
-              <span class="skill-tag">React.js</span>
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">Fast API</span>
-              <span class="skill-tag">Bootstrap</span>
-            </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Databases & Cloud</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">Firebase</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">SQLite</span>
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Docker</span>
-            </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>AI & Machine Learning</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Machine Learning</span>
-              <span class="skill-tag">Neural Networks</span>
-              <span class="skill-tag">NLP</span>
-              <span class="skill-tag">LLM</span>
-              <span class="skill-tag">Generative AI</span>
-              <span class="skill-tag">LangChain</span>
-            </div>
-          </div>
-
-          <div class="skills-category">
-            <h3>Tools & Platforms</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Git/GitHub</span>
-              <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">Figma</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">REST API</span>
-              <span class="skill-tag">Razorpay</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications & Achievements Section -->
-    <section id="achievements" class="achievements">
-      <div class="container">
-        <h2 class="section-title">Certifications & Achievements</h2>
-        <div class="achievements-grid">
-          <div class="achievement-category">
-            <h3>Professional Certifications</h3>
-            <div class="certification-list">
-              <div class="certification-item">
-                <h4>Generative AI with LangChain, Hugging Face and AWS Bedrock</h4>
-                <span class="cert-platform">Udemy</span>
-                <span class="cert-date">Jan 2025</span>
-              </div>
-              <div class="certification-item">
-                <h4>Data Analysis with Python, SQL, DAX and Power BI</h4>
-                <span class="cert-platform">Udemy</span>
-                <span class="cert-date">Jan 2025</span>
-              </div>
-              <div class="certification-item">
-                <h4>Data Science, Machine Learning and NLP Bootcamp</h4>
-                <span class="cert-platform">Udemy</span>
-                <span class="cert-date">Jan 2025</span>
-              </div>
-              <div class="certification-item">
-                <h4>Full Stack Web Development Certification</h4>
-                <span class="cert-platform">Udemy</span>
-                <span class="cert-date">Oct 2023</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="achievement-category">
-            <h3>Achievements & Leadership</h3>
-            <div class="achievement-list">
-              <div class="achievement-item">
-                <div class="achievement-icon">🏆</div>
-                <div class="achievement-content">
-                  <h4>Best Presentation Skills Award</h4>
-                  <p>Awarded in 12th grade among 150+ students for exceptional presentation and communication abilities
-                  </p>
-                </div>
-              </div>
-              <div class="achievement-item">
-                <div class="achievement-icon">💻</div>
-                <div class="achievement-content">
-                  <h4>400+ DSA Problems Solved</h4>
-                  <p>Consistently solved complex Data Structures and Algorithms problems on LeetCode and CodeStudio
-                    using C++</p>
-                </div>
-              </div>
-              <div class="achievement-item">
-                <div class="achievement-icon">⚡</div>
-                <div class="achievement-content">
-                  <h4>Performance Optimization</h4>
-                  <p>Reduced Tax Sarthi's admin portal loading time by 33% (30s to 20s) through backend optimization</p>
-                </div>
-              </div>
-            </div>
+          <div class="card" onclick="location.href='javascript-journey.html'">
+            <div class="card-icon">⚡</div>
+            <h3>JavaScript Journey</h3>
+            <p>Explore my 7-day deep dive into JavaScript, from fundamentals to advanced concepts and interactive demos.</p>
+            <span class="card-link">Explore JS →</span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-info">
-          <h3>Atharva Senapati</h3>
-          <p>Web Developer & Continuous Learner</p>
-        </div>
-        <div class="footer-copy">
-          <p>&copy; 2025 Atharva Senapati. Built with HTML5 & CSS3</p>
-          <p>This page demonstrates skills learned over 12 days of intensive web development study</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script src="assets/js/index.js"></script>
-
 </body>
 
 </html>

@@ -1,41 +1,48 @@
-# Atharva Senapati - Web Development Journey
 
-A personal profile page showcasing my 5-day intensive web development learning journey and the 5th day implementation.
+A personal profile page showcasing my complete 12-day intensive Web Development & JavaScript learning journey, including the final interactive profile implementation.
 
-## 📚 Learning Timeline
+---
+## 🔗 Live Project Link
 
-### Day 1: Web Fundamentals
-- HTML structure and semantics
-- Metadata and `<head>` tag
-- CSS color models (RGBA, HSLA)
-- Basic page structure
+👉 **Live Demo:** https://atharva377.github.io/ThinkBridge-Task-Day-5/
 
-### Day 2: CSS Mastery
-- Box Model and positioning
-- Typography and web fonts
-- Gradients and backgrounds
-- Layout techniques
+---
 
-### Day 3: Content & Structure
-- Lists and navigation
-- Media embedding (video, audio, iframes)
-- Form design and tables
-- Semantic HTML
+## 📚 Learning Timeline (Day 1 – Day 12)
 
-### Day 4: Tools & Workflow
-- VS Code and extensions
-- Git version control
-- GitHub repository management
-- Code quality tools
+---
 
-### Day 5: Profile Page Implementation
-- Applied all learned concepts
-- Created responsive design
-- Implemented modern CSS features
-- Deployed complete profile page
+## **Frontend Foundations (Day 1 – Day 5)**
+
+| Day | Focus Area | Key Concepts Learned |
+|-----|-------------|----------------------|
+| **1** | Web Fundamentals | HTML structure, semantics, `<head>` metadata, RGBA & HSLA color models |
+| **2** | CSS Mastery | Box model, positioning, typography, gradients, backgrounds, layout techniques |
+| **3** | Content & Structure | Lists, navigation, media embedding, forms, tables, semantic HTML |
+| **4** | Tools & Workflow | VS Code, extensions, Git, GitHub repo management, code quality tools |
+| **5** | Profile Page Implementation | Applied all concepts, responsive design, modern CSS, deployment |
+
+---
+
+## **JavaScript Learning Journey (Day 6 – Day 12)**
+
+| Day | Focus Area | Key Concepts Learned |
+|-----|-------------|----------------------|
+| **6** | Fundamentals | Variables, data types, logical operators |
+| **7** | Functions & Scope | Function types, parameters, scope (global/local/block) |
+| **8** | Objects & Methods | Object literals, properties, built-in methods |
+| **9** | Advanced Functions | Closures, higher-order functions, callbacks |
+| **10** | OOP Concepts | Classes, constructors, getters/setters, inheritance |
+| **11** | Advanced Features | Proxy objects, currying, partial application |
+| **12** | Practical Implementation | DOM manipulation, events, interactive features on profile page |
+
+---
 
 ## 🛠 Technologies Used
-- HTML5
-- CSS3
-- Responsive Design
-- Git & GitHub
+- **HTML5**  
+- **CSS3**  
+- **JavaScript (ES6+)**  
+
+---
+
+

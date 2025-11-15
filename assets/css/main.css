@@ -1041,6 +1041,64 @@ p {
   border-color: var(--primary-color);
 }
 
+/* Section Cards Styles */
+.section-cards {
+  padding: 6rem 0;
+  background-color: var(--section-bg);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--bg-color);
+  padding: 2.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+  border-top: 4px solid var(--primary-color);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.card-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.card:hover .card-link {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .demo-controls {
