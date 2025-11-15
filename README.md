@@ -8,6 +8,11 @@ A personal profile page showcasing my complete 12-day intensive Web Development 
 
 ---
 
+## Unique Feature
+- **Added multilingual support to the profile page.**
+
+---
+
 ## 📚 Learning Timeline (Day 1 – Day 12)
 
 ---
@@ -42,6 +47,8 @@ A personal profile page showcasing my complete 12-day intensive Web Development 
 - **HTML5**  
 - **CSS3**  
 - **JavaScript (ES6+)**  
+
+
 
 ---
 
