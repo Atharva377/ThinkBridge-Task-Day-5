@@ -9,9 +9,91 @@
   <meta name="keywords" content="web development, HTML, CSS, frontend, Atharva Senapati" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
+  <style>
+    /* Language Selector Styles */
+    .language-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .language-btn {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 150px;
+      margin-top: 5px;
+    }
+    
+    .language-dropdown.show {
+      display: block;
+    }
+    
+    .language-option {
+      padding: 10px 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .language-option:hover {
+      background: #f5f5f5;
+    }
+    
+    .language-option.active {
+      background: #e9ecef;
+      font-weight: bold;
+    }
+    
+    .flag-icon {
+      width: 20px;
+      height: 15px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <div class="language-btn" id="languageBtn">
+      <span>English</span>
+      <span>▼</span>
+    </div>
+    <div class="language-dropdown" id="languageDropdown">
+      <div class="language-option active" data-lang="en">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHBhdGggZmlsbD0iIzAxMjE2OSIgZD0iTTAgMGg2MHYzMEgweiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2Mkgwem0wIDRoNjB2MkgweiIvPjxwYXRoIGZpbGw9IiUyMzdGQjciIGQ9Ik0wIDBoMzB2MzBIMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTEuNCAwbDEuNSA0LjVMMTUuOCAwaDEuNWwtMi4yIDUuNEwxOCAwaDEuNWwtMi4yIDUuNEwyMC41IDBoMS41bC0yLjIgNS40TDIzIDBoMS41bC0yLjIgNS40TDI1LjUgMGgxLjVsLTIuMiA1LjRMMjggMGgxLjVsLTIuMiA1LjRMMzAuNSAwSDMyTDIwIDMwSDB6Ii8+PC9zdmc+" alt="English" class="flag-icon">
+        English
+      </div>
+      <div class="language-option" data-lang="hi">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGg2MHYzMEgweiIvPjxwYXRoIGZpbGw9IiNmZGE0MDciIGQ9Ik0wIDBoNjB2MTBIMHptMCAyMGg2MHYxMEgweiIvPjxwYXRoIGZpbGw9IiMwODk3NDQiIGQ9Ik0wIDEwaDYwdjEwSDB6Ii8+PGNpcmNsZSBjeD0iMzAiIGN5PSIxNSIgcj0iNSIgZmlsbD0iIzAwODVjMyIvPjwvc3ZnPg==" alt="Hindi" class="flag-icon">
+        हिन्दी
+      </div>
+      <div class="language-option" data-lang="mr">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGg2MHYzMEgweiIvPjxwYXRoIGZpbGw9IiNmZGE0MDciIGQ9Ik0wIDBoNjB2MTBIMHptMCAyMGg2MHYxMEgweiIvPjxwYXRoIGZpbGw9IiMwODk3NDQiIGQ9Ik0wIDEwaDYwdjEwSDB6Ii8+PGNpcmNsZSBjeD0iMzAiIGN5PSIxNSIgcj0iNSIgZmlsbD0iIzAwODVjMyIvPjwvc3ZnPg==" alt="Marathi" class="flag-icon">
+        मराठी
+      </div>
+    </div>
+  </div>
 
   <main>
     <!-- Hero Section -->
@@ -22,11 +104,10 @@
             <img src="assets/images/photo.jpeg" alt="Atharva Senapati" />
           </div>
           <div class="hero-text">
-            <h2>Hi, I'm <span class="highlight">Atharva Senapati</span></h2>
-            <p>Aspiring Web Developer</p>
-            <p>Passionate about creating beautiful, functional websites using modern web technologies</p>
+            <h2 data-key="greeting">Hi, I'm <span class="highlight">Atharva Senapati</span></h2>
+            <p data-key="title">Aspiring Web Developer</p>
+            <p data-key="description">Passionate about creating beautiful, functional websites using modern web technologies</p>
             <div class="hero-buttons">
-              <button id="themeToggle" class="btn btn-secondary">Toggle Theme</button>
             </div>
           </div>
         </div>
@@ -36,41 +117,166 @@
     <!-- Section Cards -->
     <section class="section-cards">
       <div class="container">
-        <h2 class="section-title">Explore My Journey</h2>
+        <h2 class="section-title" data-key="explore">Explore My Journey</h2>
         <div class="cards-grid">
           <div class="card" onclick="location.href='about.html'">
             <div class="card-icon">👤</div>
-            <h3>About Me</h3>
-            <p>Learn about my background, passion for web development, and approach to creating clean, user-friendly websites.</p>
-            <span class="card-link">Learn More →</span>
+            <h3 data-key="about-title">About Me</h3>
+            <p data-key="about-desc">Learn about my background, passion for web development, and approach to creating clean, user-friendly websites.</p>
+            <span class="card-link" data-key="learn-more">Learn More →</span>
           </div>
 
           <div class="card" onclick="location.href='skills.html'">
             <div class="card-icon">💻</div>
-            <h3>Technical Skills</h3>
-            <p>Discover my expertise in HTML5, CSS3, modern frameworks, and development tools I've mastered.</p>
-            <span class="card-link">View Skills →</span>
+            <h3 data-key="skills-title">Technical Skills</h3>
+            <p data-key="skills-desc">Discover my expertise in HTML5, CSS3, modern frameworks, and development tools I've mastered.</p>
+            <span class="card-link" data-key="view-skills">View Skills →</span>
           </div>
 
           <div class="card" onclick="location.href='journey.html'">
             <div class="card-icon">📚</div>
-            <h3>Learning Journey</h3>
-            <p>Follow my intensive 5-day journey from web fundamentals to building complete portfolio websites.</p>
-            <span class="card-link">See Journey →</span>
+            <h3 data-key="journey-title">Learning Journey</h3>
+            <p data-key="journey-desc">Follow my intensive 5-day journey from web fundamentals to building complete portfolio websites.</p>
+            <span class="card-link" data-key="see-journey">See Journey →</span>
           </div>
 
           <div class="card" onclick="location.href='javascript-journey.html'">
             <div class="card-icon">⚡</div>
-            <h3>JavaScript Journey</h3>
-            <p>Explore my 7-day deep dive into JavaScript, from fundamentals to advanced concepts and interactive demos.</p>
-            <span class="card-link">Explore JS →</span>
+            <h3 data-key="js-title">JavaScript Journey</h3>
+            <p data-key="js-desc">Explore my 7-day deep dive into JavaScript, from fundamentals to advanced concepts and interactive demos.</p>
+            <span class="card-link" data-key="explore-js">Explore JS →</span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="assets/js/index.js"></script>
+  <script>
+    // Language data
+    const translations = {
+      en: {
+        "greeting": "Hi, I'm <span class='highlight'>Atharva Senapati</span>",
+        "title": "Aspiring Web Developer",
+        "description": "Passionate about creating beautiful, functional websites using modern web technologies",
+        "explore": "Explore My Journey",
+        "about-title": "About Me",
+        "about-desc": "Learn about my background, passion for web development, and approach to creating clean, user-friendly websites.",
+        "learn-more": "Learn More →",
+        "skills-title": "Technical Skills",
+        "skills-desc": "Discover my expertise in HTML5, CSS3, modern frameworks, and development tools I've mastered.",
+        "view-skills": "View Skills →",
+        "journey-title": "Learning Journey",
+        "journey-desc": "Follow my intensive 5-day journey from web fundamentals to building complete portfolio websites.",
+        "see-journey": "See Journey →",
+        "js-title": "JavaScript Journey",
+        "js-desc": "Explore my 7-day deep dive into JavaScript, from fundamentals to advanced concepts and interactive demos.",
+        "explore-js": "Explore JS →"
+      },
+      hi: {
+        "greeting": "नमस्ते, मैं <span class='highlight'>अथर्व सेनापति</span> हूँ",
+        "title": "उभरता वेब डेवलपर",
+        "description": "आधुनिक वेब तकनीकों का उपयोग करके सुंदर, कार्यात्मक वेबसाइटें बनाने के लिए उत्साही",
+        "explore": "मेरी यात्रा का अन्वेषण करें",
+        "about-title": "मेरे बारे में",
+        "about-desc": "मेरी पृष्ठभूमि, वेब विकास के प्रति जुनून, और साफ, उपयोगकर्ता के अनुकूल वेबसाइट बनाने के दृष्टिकोण के बारे में जानें।",
+        "learn-more": "अधिक जानें →",
+        "skills-title": "तकनीकी कौशल",
+        "skills-desc": "HTML5, CSS3, आधुनिक फ्रेमवर्क और विकास उपकरणों में मेरी विशेषज्ञता की खोज करें जिनमें मैंने महारत हासिल की है।",
+        "view-skills": "कौशल देखें →",
+        "journey-title": "सीखने की यात्रा",
+        "journey-desc": "वेब मूलभूत बातों से लेकर पूर्ण पोर्टफोलियो वेबसाइटों के निर्माण तक मेरी गहन 5-दिवसीय यात्रा का अनुसरण करें।",
+        "see-journey": "यात्रा देखें →",
+        "js-title": "जावास्क्रिप्ट यात्रा",
+        "js-desc": "जावास्क्रिप्ट में मेरी 7-दिवसीय गहरी डुबकी का अन्वेषण करें, मूलभूत बातों से लेकर उन्नत अवधारणाओं और इंटरैक्टिव डेमो तक।",
+        "explore-js": "जेएस एक्सप्लोर करें →"
+      },
+      mr: {
+        "greeting": "नमस्कार, मी <span class='highlight'>अथर्व सेनापती</span> आहे",
+        "title": "उदयोन्मुख वेब डेवलपर",
+        "description": "आधुनिक वेब तंत्रज्ञान वापरून सुंदर, कार्यात्मक वेबसाइट्स तयार करण्यासाठी उत्सुक",
+        "explore": "माझ्या प्रवासाचा शोध घ्या",
+        "about-title": "माझ्याबद्दल",
+        "about-desc": "माझ्या पार्श्वभूमी, वेब डेव्हलपमेंटबद्दलच्या आवडी, आणि स्वच्छ, वापरकर्ता-अनुकूल वेबसाइट्स तयार करण्याच्या दृष्टिकोनाबद्दल जाणून घ्या.",
+        "learn-more": "अधिक जाणून घ्या →",
+        "skills-title": "तांत्रिक कौशल्ये",
+        "skills-desc": "HTML5, CSS3, आधुनिक फ्रेमवर्क आणि डेव्हलपमेंट साधनांमधील माझ्या कौशल्याचा शोध घ्या ज्यात मी प्रावीण्य मिळवले आहे.",
+        "view-skills": "कौशल्ये पहा →",
+        "journey-title": "शिकण्याचा प्रवास",
+        "journey-desc": "वेब मूलभूत गोष्टींपासून पूर्ण पोर्टफोलिओ वेबसाइट्स बांधण्यापर्यंतच्या माझ्या तीव्र ५-दिवसीय प्रवासाचे अनुसरण करा.",
+        "see-journey": "प्रवास पहा →",
+        "js-title": "जावास्क्रिप्ट प्रवास",
+        "js-desc": "जावास्क्रिप्टमध्ये माझ्या ७-दिवसीय खोल डुबकीचा शोध घ्या, मूलभूत गोष्टींपासून प्रगत संकल्पना आणि इंटरॅक्टिव्ह डेमो पर्यंत.",
+        "explore-js": "जेएस एक्सप्लोर करा →"
+      }
+    };
+
+    // DOM elements
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const languageOptions = document.querySelectorAll('.language-option');
+
+    // Current language
+    let currentLang = 'en';
+
+    // Toggle dropdown
+    languageBtn.addEventListener('click', () => {
+      languageDropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+        languageDropdown.classList.remove('show');
+      }
+    });
+
+    // Change language
+    languageOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const lang = option.getAttribute('data-lang');
+        changeLanguage(lang);
+        languageDropdown.classList.remove('show');
+      });
+    });
+
+    // Function to change language
+    function changeLanguage(lang) {
+      currentLang = lang;
+      
+      // Update active language option
+      languageOptions.forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-lang') === lang) {
+          option.classList.add('active');
+        }
+      });
+      
+      // Update button text
+      const langText = {
+        'en': 'English',
+        'hi': 'हिन्दी',
+        'mr': 'मराठी'
+      };
+      languageBtn.querySelector('span').textContent = langText[lang];
+      
+      // Update all translatable elements
+      const translatableElements = document.querySelectorAll('[data-key]');
+      translatableElements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+          if (element.tagName === 'SPAN' && element.classList.contains('highlight')) {
+            // Special handling for the name span
+            element.innerHTML = translations[lang][key];
+          } else {
+            element.innerHTML = translations[lang][key];
+          }
+        }
+      });
+    }
+
+    // Initialize with English
+    changeLanguage('en');
+  </script>
 </body>
 
 </html>

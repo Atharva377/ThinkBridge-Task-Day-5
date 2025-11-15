@@ -1,286 +1,335 @@
 
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme');
-      themeToggle.textContent = document.body.classList.contains('dark-theme') 
-        ? 'Light Theme' 
-        : 'Dark Theme';
-    });
+// JavaScript Demo Functions
+function checkNumber() {
+    const input = document.getElementById('numberInput');
+    const output = document.getElementById('logicalOutput');
+    const number = parseInt(input.value);
 
-    // Counter with Closure
-    const createCounter = (() => {
-      let count = 0;
-      return {
-        increment: () => ++count,
-        decrement: () => --count,
-        reset: () => count = 0,
-        getValue: () => count
-      };
-    })();
-
-    function incrementCounter() {
-      createCounter.increment();
-      updateCounterDisplay();
-    }
-
-    function decrementCounter() {
-      createCounter.decrement();
-      updateCounterDisplay();
-    }
-
-    function resetCounter() {
-      createCounter.reset();
-      updateCounterDisplay();
-    }
-
-    function updateCounterDisplay() {
-      document.getElementById('counterValue').textContent = createCounter.getValue();
-    }
-
-    // Logical Operators & Functions Demo
-    function checkNumber() {
-      const input = document.getElementById('numberInput').value;
-      const num = parseInt(input);
-      const output = document.getElementById('logicalOutput');
-      
-      if (isNaN(num)) {
-        output.innerHTML = '<p class="error">Please enter a valid number</p>';
+    if (isNaN(number)) {
+        output.innerHTML = '<span class="error">Please enter a valid number</span>';
         return;
-      }
-
-      let result = '';
-      
-      // Using logical operators
-      if (num > 0 && num < 100) {
-        result = `✅ ${num} is between 1 and 99`;
-      } else if (num <= 0 || num >= 100) {
-        result = `⚠️ ${num} is NOT between 1 and 99`;
-      }
-      
-      // Using ternary operator
-      const isEven = num % 2 === 0 ? 'even' : 'odd';
-      result += `<br>🔢 ${num} is an ${isEven} number`;
-      
-      output.innerHTML = `<p>${result}</p>`;
     }
 
-    // Closure Demonstration
-    function demonstrateClosure() {
-      const output = document.getElementById('logicalOutput');
-      
-      // Simple closure example
-      function createMultiplier(factor) {
-        return function(number) {
-          return number * factor;
+    let result = '';
+    if (number > 0 && number < 100) {
+        result = `✅ ${number} is between 0 and 100`;
+    } else if (number <= 0 || number >= 100) {
+        result = `❌ ${number} is NOT between 0 and 100`;
+    }
+
+    if (number % 2 === 0 && number > 50) {
+        result += `<br>✨ ${number} is even and greater than 50`;
+    }
+
+    output.innerHTML = result;
+}
+
+function demonstrateClosure() {
+    const output = document.getElementById('logicalOutput');
+    
+    function createCounter() {
+        let count = 0;
+        return function() {
+            count++;
+            return count;
         };
-      }
-      
-      const double = createMultiplier(2);
-      const triple = createMultiplier(3);
-      
-      const randomNum = Math.floor(Math.random() * 10) + 1;
-      
-      output.innerHTML = `
-        <p>🔄 Closure Example:</p>
-        <p>Double of ${randomNum} = ${double(randomNum)}</p>
-        <p>Triple of ${randomNum} = ${triple(randomNum)}</p>
-        <p><small>The multiplier functions remember their factor values even after createMultiplier has finished executing!</small></p>
-      `;
     }
 
-    // Objects, Getters & Setters
-    function createStudentObject() {
-      const output = document.getElementById('objectOutput');
-      
-      class Student {
-        constructor(name, age) {
-          this._name = name;
-          this._age = age;
-          this._grades = [];
-        }
+    const counter = createCounter();
+    let result = 'Closure Demo:<br>';
+    result += `Counter 1: ${counter()}<br>`;
+    result += `Counter 2: ${counter()}<br>`;
+    result += `Counter 3: ${counter()}<br>`;
+    result += 'Each call remembers the previous count!';
+
+    output.innerHTML = result;
+}
+
+function createStudentObject() {
+    const output = document.getElementById('objectOutput');
+    
+    const student = {
+        name: 'Atharva Senapati',
+        age: 20,
+        course: 'Web Development',
+        
+        // Method
+        introduce() {
+            return `Hello, I'm ${this.name}, studying ${this.course}`;
+        },
         
         // Getter
+        get status() {
+            return this.age >= 18 ? 'Adult' : 'Minor';
+        }
+    };
+
+    let result = 'Student Object Created:<br>';
+    result += `Name: ${student.name}<br>`;
+    result += `Age: ${student.age}<br>`;
+    result += `Course: ${student.course}<br>`;
+    result += `Introduction: ${student.introduce()}<br>`;
+    result += `Status: ${student.status}`;
+
+    output.innerHTML = result;
+}
+
+function useGetterSetter() {
+    const output = document.getElementById('objectOutput');
+    
+    const person = {
+        _name: 'John',
+        
         get name() {
-          return this._name;
-        }
-        
-        // Setter with validation
-        set name(newName) {
-          if (typeof newName === 'string' && newName.length > 0) {
-            this._name = newName;
-          } else {
-            console.log('Invalid name');
-          }
-        }
-        
-        get age() {
-          return this._age;
-        }
-        
-        set age(newAge) {
-          if (newAge >= 0 && newAge <= 120) {
-            this._age = newAge;
-          }
-        }
-        
-        addGrade(grade) {
-          this._grades.push(grade);
-        }
-        
-        get averageGrade() {
-          if (this._grades.length === 0) return 0;
-          const sum = this._grades.reduce((a, b) => a + b, 0);
-          return (sum / this._grades.length).toFixed(2);
-        }
-      }
-      
-      const student = new Student('Atharva', 20);
-      student.addGrade(85);
-      student.addGrade(92);
-      student.addGrade(78);
-      
-      output.innerHTML = `
-        <p>🎓 Student Object Created:</p>
-        <p>Name: ${student.name}</p>
-        <p>Age: ${student.age}</p>
-        <p>Grades: ${student._grades.join(', ')}</p>
-        <p>Average: ${student.averageGrade}</p>
-      `;
-    }
-
-    function useGetterSetter() {
-      const output = document.getElementById('objectOutput');
-      
-      const person = {
-        _firstName: 'John',
-        _lastName: 'Doe',
-        
-        get fullName() {
-          return `${this._firstName} ${this._lastName}`;
+            return this._name;
         },
         
-        set fullName(name) {
-          const parts = name.split(' ');
-          if (parts.length === 2) {
-            this._firstName = parts[0];
-            this._lastName = parts[1];
-          }
+        set name(value) {
+            if (value.length > 0) {
+                this._name = value;
+            } else {
+                console.log('Name cannot be empty');
+            }
         }
-      };
-      
-      output.innerHTML = `
-        <p>👤 Getter/Setter Demo:</p>
-        <p>Original: ${person.fullName}</p>
-      `;
-      
-      person.fullName = 'Jane Smith';
-      
-      output.innerHTML += `
-        <p>After setter: ${person.fullName}</p>
-        <p><small>The fullName setter automatically splits and updates first/last names!</small></p>
-      `;
-    }
+    };
 
-    // Proxy Demonstration
-    function demonstrateProxy() {
-      const output = document.getElementById('advancedOutput');
-      
-      const target = {
-        message: 'Hello, World!',
-        count: 0
-      };
-      
-      const handler = {
-        get: function(obj, prop) {
-          if (prop in obj) {
-            return obj[prop];
-          } else {
-            return `Property "${prop}" doesn't exist`;
-          }
+    let result = 'Getter/Setter Demo:<br>';
+    result += `Initial Name: ${person.name}<br>`;
+    person.name = 'Atharva';
+    result += `After Setter: ${person.name}<br>`;
+    person.name = '';
+    result += `After Empty Set: ${person.name} (unchanged)<br>`;
+    result += 'Name property is protected!';
+
+    output.innerHTML = result;
+}
+
+function demonstrateProxy() {
+    const output = document.getElementById('advancedOutput');
+    
+    const target = {
+        message: 'Hello, World!'
+    };
+
+    const handler = {
+        get(obj, prop) {
+            if (prop in obj) {
+                return `Proxy intercepted: ${obj[prop]}`;
+            }
+            return `Property ${prop} doesn't exist`;
         },
         
-        set: function(obj, prop, value) {
-          if (prop === 'count' && typeof value !== 'number') {
-            console.log('Count must be a number');
+        set(obj, prop, value) {
+            if (prop === 'message') {
+                obj[prop] = value.toUpperCase();
+                return true;
+            }
             return false;
-          }
-          obj[prop] = value;
-          return true;
         }
-      };
-      
-      const proxy = new Proxy(target, handler);
-      
-      output.innerHTML = `
-        <p>🔄 Proxy Demo:</p>
-        <p>proxy.message: "${proxy.message}"</p>
-        <p>proxy.count: ${proxy.count}</p>
-        <p>proxy.unknown: "${proxy.unknown}"</p>
-      `;
-      
-      proxy.count = 42;
-      output.innerHTML += `<p>After proxy.count = 42: ${proxy.count}</p>`;
-      
-      proxy.count = 'invalid';
-      output.innerHTML += `<p>After trying to set count to string: ${proxy.count} (unchanged)</p>`;
-    }
+    };
 
-    // Currying Demonstration
-    function demonstrateCurrying() {
-      const output = document.getElementById('advancedOutput');
-      
-      // Regular function
-      function multiply(a, b, c) {
-        return a * b * c;
-      }
-      
-      // Curried version
-      function curryMultiply(a) {
+    const proxy = new Proxy(target, handler);
+
+    let result = 'Proxy Demo:<br>';
+    result += `Original: ${target.message}<br>`;
+    result += `Through Proxy: ${proxy.message}<br>`;
+    
+    proxy.message = 'hello from proxy';
+    result += `After Setting: ${proxy.message}<br>`;
+    result += 'Proxy can intercept and modify operations!';
+
+    output.innerHTML = result;
+}
+
+function demonstrateCurrying() {
+    const output = document.getElementById('advancedOutput');
+    
+    // Curried function
+    function multiply(a) {
         return function(b) {
-          return function(c) {
-            return a * b * c;
-          };
+            return a * b;
         };
-      }
-      
-      // ES6 arrow function currying
-      const curryMultiplyES6 = a => b => c => a * b * c;
-      
-      const result1 = multiply(2, 3, 4);
-      const result2 = curryMultiply(2)(3)(4);
-      const result3 = curryMultiplyES6(2)(3)(4);
-      
-      // Partial application
-      const multiplyByTwo = curryMultiply(2);
-      const multiplyByTwoAndThree = multiplyByTwo(3);
-      const result4 = multiplyByTwoAndThree(4);
-      
-      output.innerHTML = `
-        <p>🎯 Currying Demo:</p>
-        <p>Regular: multiply(2, 3, 4) = ${result1}</p>
-        <p>Curried: curryMultiply(2)(3)(4) = ${result2}</p>
-        <p>ES6 Curried: curryMultiplyES6(2)(3)(4) = ${result3}</p>
-        <p>Partial Application: multiplyByTwo(3)(4) = ${result4}</p>
-        <p><small>Currying transforms a function with multiple arguments into a sequence of functions each with a single argument!</small></p>
-      `;
     }
 
-    // Initialize page
-    document.addEventListener('DOMContentLoaded', function() {
-      updateCounterDisplay();
-      
-      // Add smooth scrolling for navigation
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
+    const double = multiply(2);
+    const triple = multiply(3);
+
+    let result = 'Currying Demo:<br>';
+    result += `multiply(2)(5): ${multiply(2)(5)}<br>`;
+    result += `double(10): ${double(10)}<br>`;
+    result += `triple(7): ${triple(7)}<br>`;
+    result += 'Currying transforms multi-argument functions into sequence of single-argument functions!';
+
+    output.innerHTML = result;
+}
+
+// Counter with closure
+let counter = (function() {
+    let count = 0;
+    return {
+        increment() {
+            count++;
+            return count;
+        },
+        decrement() {
+            count--;
+            return count;
+        },
+        reset() {
+            count = 0;
+            return count;
+        },
+        getValue() {
+            return count;
+        }
+    };
+})();
+
+function updateCounterDisplay() {
+    document.getElementById('counterValue').textContent = counter.getValue();
+}
+
+function incrementCounter() {
+    counter.increment();
+    updateCounterDisplay();
+}
+
+function decrementCounter() {
+    counter.decrement();
+    updateCounterDisplay();
+}
+
+function resetCounter() {
+    counter.reset();
+    updateCounterDisplay();
+}
+
+// Initialize counter display
+document.addEventListener('DOMContentLoaded', function() {
+    updateCounterDisplay();
+});
+
+    // Language data
+    const translations = {
+      en: {
+        "greeting": "Hi, I'm <span class='highlight'>Atharva Senapati</span>",
+        "title": "Aspiring Web Developer",
+        "description": "Passionate about creating beautiful, functional websites using modern web technologies",
+        "explore": "Explore My Journey",
+        "about-title": "About Me",
+        "about-desc": "Learn about my background, passion for web development, and approach to creating clean, user-friendly websites.",
+        "learn-more": "Learn More →",
+        "skills-title": "Technical Skills",
+        "skills-desc": "Discover my expertise in HTML5, CSS3, modern frameworks, and development tools I've mastered.",
+        "view-skills": "View Skills →",
+        "journey-title": "Learning Journey",
+        "journey-desc": "Follow my intensive 5-day journey from web fundamentals to building complete portfolio websites.",
+        "see-journey": "See Journey →",
+        "js-title": "JavaScript Journey",
+        "js-desc": "Explore my 7-day deep dive into JavaScript, from fundamentals to advanced concepts and interactive demos.",
+        "explore-js": "Explore JS →"
+      },
+      hi: {
+        "greeting": "नमस्ते, मैं <span class='highlight'>अथर्व सेनापति</span> हूँ",
+        "title": "उभरता वेब डेवलपर",
+        "description": "आधुनिक वेब तकनीकों का उपयोग करके सुंदर, कार्यात्मक वेबसाइटें बनाने के लिए उत्साही",
+        "explore": "मेरी यात्रा का अन्वेषण करें",
+        "about-title": "मेरे बारे में",
+        "about-desc": "मेरी पृष्ठभूमि, वेब विकास के प्रति जुनून, और साफ, उपयोगकर्ता के अनुकूल वेबसाइट बनाने के दृष्टिकोण के बारे में जानें।",
+        "learn-more": "अधिक जानें →",
+        "skills-title": "तकनीकी कौशल",
+        "skills-desc": "HTML5, CSS3, आधुनिक फ्रेमवर्क और विकास उपकरणों में मेरी विशेषज्ञता की खोज करें जिनमें मैंने महारत हासिल की है।",
+        "view-skills": "कौशल देखें →",
+        "journey-title": "सीखने की यात्रा",
+        "journey-desc": "वेब मूलभूत बातों से लेकर पूर्ण पोर्टफोलियो वेबसाइटों के निर्माण तक मेरी गहन 5-दिवसीय यात्रा का अनुसरण करें।",
+        "see-journey": "यात्रा देखें →",
+        "js-title": "जावास्क्रिप्ट यात्रा",
+        "js-desc": "जावास्क्रिप्ट में मेरी 7-दिवसीय गहरी डुबकी का अन्वेषण करें, मूलभूत बातों से लेकर उन्नत अवधारणाओं और इंटरैक्टिव डेमो तक।",
+        "explore-js": "जेएस एक्सप्लोर करें →"
+      },
+      mr: {
+        "greeting": "नमस्कार, मी <span class='highlight'>अथर्व सेनापती</span> आहे",
+        "title": "उदयोन्मुख वेब डेवलपर",
+        "description": "आधुनिक वेब तंत्रज्ञान वापरून सुंदर, कार्यात्मक वेबसाइट्स तयार करण्यासाठी उत्सुक",
+        "explore": "माझ्या प्रवासाचा शोध घ्या",
+        "about-title": "माझ्याबद्दल",
+        "about-desc": "माझ्या पार्श्वभूमी, वेब डेव्हलपमेंटबद्दलच्या आवडी, आणि स्वच्छ, वापरकर्ता-अनुकूल वेबसाइट्स तयार करण्याच्या दृष्टिकोनाबद्दल जाणून घ्या.",
+        "learn-more": "अधिक जाणून घ्या →",
+        "skills-title": "तांत्रिक कौशल्ये",
+        "skills-desc": "HTML5, CSS3, आधुनिक फ्रेमवर्क आणि डेव्हलपमेंट साधनांमधील माझ्या कौशल्याचा शोध घ्या ज्यात मी प्रावीण्य मिळवले आहे.",
+        "view-skills": "कौशल्ये पहा →",
+        "journey-title": "शिकण्याचा प्रवास",
+        "journey-desc": "वेब मूलभूत गोष्टींपासून पूर्ण पोर्टफोलिओ वेबसाइट्स बांधण्यापर्यंतच्या माझ्या तीव्र ५-दिवसीय प्रवासाचे अनुसरण करा.",
+        "see-journey": "प्रवास पहा →",
+        "js-title": "जावास्क्रिप्ट प्रवास",
+        "js-desc": "जावास्क्रिप्टमध्ये माझ्या ७-दिवसीय खोल डुबकीचा शोध घ्या, मूलभूत गोष्टींपासून प्रगत संकल्पना आणि इंटरॅक्टिव्ह डेमो पर्यंत.",
+        "explore-js": "जेएस एक्सप्लोर करा →"
+      }
+    };
+
+    // DOM elements
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const languageOptions = document.querySelectorAll('.language-option');
+
+    // Current language
+    let currentLang = 'en';
+
+    // Toggle dropdown
+    languageBtn.addEventListener('click', () => {
+      languageDropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+        languageDropdown.classList.remove('show');
+      }
+    });
+
+    // Change language
+    languageOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const lang = option.getAttribute('data-lang');
+        changeLanguage(lang);
+        languageDropdown.classList.remove('show');
       });
     });
+
+    // Function to change language
+    function changeLanguage(lang) {
+      currentLang = lang;
+      
+      // Update active language option
+      languageOptions.forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-lang') === lang) {
+          option.classList.add('active');
+        }
+      });
+      
+      // Update button text
+      const langText = {
+        'en': 'English',
+        'hi': 'हिन्दी',
+        'mr': 'मराठी'
+      };
+      languageBtn.querySelector('span').textContent = langText[lang];
+      
+      // Update all translatable elements
+      const translatableElements = document.querySelectorAll('[data-key]');
+      translatableElements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+          if (element.tagName === 'SPAN' && element.classList.contains('highlight')) {
+            // Special handling for the name span
+            element.innerHTML = translations[lang][key];
+          } else {
+            element.innerHTML = translations[lang][key];
+          }
+        }
+      });
+    }
+
+    // Initialize with English
+    changeLanguage('en');
