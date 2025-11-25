@@ -13,6 +13,40 @@ A personal profile page showcasing my complete 12-day intensive Web Development 
 
 ---
 
+## 🗂 Project File Structure
+
+```
+.
+├── index.html
+├── assets
+│   ├── css
+│   │   └── main.css
+│   ├── images
+│   │   ├── photo.jpeg
+│   │   └── favicon
+│   │       ├── apple-touch-icon.png
+│   │       └── favicon.png
+│   └── js
+│       └── index.js
+└── pages
+    ├── about.html
+    ├── javascript-journey.html
+    ├── journey.html
+    └── skills.html
+```
+
+---
+
+## 📚 Project Sections
+
+- **Home/Profile Page:** The main landing page showcasing the interactive personal profile.
+- **About:** Information about the profile owner.
+- **JavaScript Journey:** Details on the JavaScript learning progression.
+- **Journey:** Overview of the overall learning path.
+- **Skills:** Highlights of skills acquired during the course.
+
+---
+
 ## 📚 Learning Timeline (Day 1 – Day 12)
 
 ---
