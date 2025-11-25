@@ -1074,7 +1074,16 @@ p {
 }
 
 .card:hover::before {
+  opacity: 0.5;
+}
+
+.card:hover h3,
+.card:hover p,
+.card:hover .card-link {
   opacity: 1;
+  color: inherit;
+  position: relative;
+  z-index: 2;
 }
 
 /* Hover floating */
